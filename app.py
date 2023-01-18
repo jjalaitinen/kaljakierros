@@ -9,10 +9,9 @@ def etusivu():
     arvotut_baarit = arvo_baarit(5)
     return render_template("index.html",baarit=arvotut_baarit)
 
-@app.route("/testi", methods=["GET"])
-def testi():
-    print("toimii!")
-    return tulostus
+@app.route("/baarit", methods=["GET"])
+def baarit():
+    return jsonify(arvo_baarit(5))
 
 def arvo_baarit(lkm):
     baarit_json = open("baarit.json")
@@ -20,4 +19,5 @@ def arvo_baarit(lkm):
     baarit_json.close()
     arvotut_baarit = random.sample(baarit_lista, k=lkm)
     return arvotut_baarit
+
     
