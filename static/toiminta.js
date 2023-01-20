@@ -8,11 +8,14 @@ function luo_baari_elementti(baari) {
   return baarilista_elementti;
 }
 
-// Funktion tarkoitus on listata baarit html-sivulle.
+// Funktion tarkoitus on listata kaikki baarit html-sivulle.
 // Haetaan tiedot localStoragesta
-function listaa_baarit() {
+function listaa_kaikki_baarit() {
   let baarit = localStorage.getItem("baaritiedot");
   let baarit_objekti = JSON.parse(baarit);
+  baarit_objekti.sort((a, b) => {
+    return a["nimi"].localeCompare(b["nimi"], "sv", { sensitivity: "accent" });
+  });
   for (let i = 0; i < baarit_objekti.length; i++) {
     let baari = baarit_objekti[i];
     let baarilista_elementti = luo_baari_elementti(baari);
@@ -51,7 +54,7 @@ async function hae_kaikki_baarit() {
 
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
-    listaa_baarit();
+    listaa_kaikki_baarit();
     lisaa_kasittelijat();
   });
 });
