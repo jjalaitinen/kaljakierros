@@ -1,8 +1,23 @@
+// Funktio tekee sille tuodusta oliosta elementin html-puuhun
+function luo_baari_elementti(baari) {
+  let li = $("<li></li>");
+
+  let div = $("<div></div>");
+
+  let p = $("<p></p>").text(baari.nimi);
+
+  let kokonaisuus = li.append(div).append(p);
+  $("#kaikki_baarit").append(kokonaisuus);
+}
+
+// Funktion tarkoitus on listata baarit html-sivulle.
+// Haetaan tiedot localStoragesta
 function listaa_baarit() {
   let baarit = localStorage.getItem("baaritiedot");
   let baarit_objekti = JSON.parse(baarit);
   for (let i = 0; i < baarit_objekti.length; i++) {
-    console.log(baarit_objekti[i].nimi);
+    let baari = baarit_objekti[i];
+    luo_baari_elementti(baari);
   }
 }
 
