@@ -6,8 +6,7 @@ $(document).ready(function () {
       url: '/baarit',
       success: function (data) {
         baarilista = $('#baarilista');
-        baarilista.empty(); // parempia tapoja?
-        //const baarit = JSON.parse(data)
+        baarilista.empty();
         data.forEach((baari) => {
           li = document.createElement('li');
           li.textContent = baari['nimi'];
