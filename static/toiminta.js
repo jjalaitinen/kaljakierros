@@ -1,9 +1,7 @@
 // Funktio tekee sille tuodusta oliosta elementin html-puuhun
 function luo_baari_elementti(baari) {
   let li = $("<li></li>");
-
   let div = $("<div></div>");
-
   let p = $("<p></p>").text(baari.nimi);
 
   let baarilista_elementti = li.append(div).append(p);
