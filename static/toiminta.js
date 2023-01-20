@@ -2,9 +2,9 @@
 function luo_baari_elementti(baari) {
   let li = $("<li></li>");
   let div = $("<div></div>");
-  let p = $("<p></p>").text(baari.nimi);
+  let div_sisempi = $("<div></div>").text(baari.nimi);
 
-  let baarilista_elementti = li.append(div).append(p);
+  let baarilista_elementti = li.append(div).append(div_sisempi);
   return baarilista_elementti;
 }
 
