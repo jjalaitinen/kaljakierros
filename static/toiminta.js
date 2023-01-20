@@ -21,11 +21,14 @@ function listaa_baarit() {
 }
 
 function lisaa_kasittelijat() {
+  var kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
   $("#lisaa_baari").click(function () {
-    let kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
+    if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
     let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
+    // Poistetaan
+    kaikki_baarit.splice(satunnainen_indeksi, 1);
     $("#baarikierroslista").append(baarilista_elementti);
   });
 
@@ -47,7 +50,8 @@ async function hae_kaikki_baarit() {
 }
 
 $(document).ready(function () {
-  hae_kaikki_baarit().then(listaa_baarit);
-
-  lisaa_kasittelijat();
+  hae_kaikki_baarit().then(() => {
+    listaa_baarit();
+    lisaa_kasittelijat();
+  });
 });
