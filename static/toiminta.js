@@ -6,8 +6,8 @@ function luo_baari_elementti(baari) {
 
   let p = $("<p></p>").text(baari.nimi);
 
-  let kokonaisuus = li.append(div).append(p);
-  $("#kaikki_baarit").append(kokonaisuus);
+  let baarilista_elementti = li.append(div).append(p);
+  return baarilista_elementti;
 }
 
 // Funktion tarkoitus on listata baarit html-sivulle.
@@ -17,11 +17,24 @@ function listaa_baarit() {
   let baarit_objekti = JSON.parse(baarit);
   for (let i = 0; i < baarit_objekti.length; i++) {
     let baari = baarit_objekti[i];
-    luo_baari_elementti(baari);
+    let baarilista_elementti = luo_baari_elementti(baari);
+    $("#kaikki_baarit").append(baarilista_elementti);
   }
 }
 
-function lisaa_kasittelijat() {}
+function lisaa_kasittelijat() {
+  $("#lisaa_baari").click(function () {
+    let kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
+    let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
+    let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
+    let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
+    $("#baarikierroslista").append(baarilista_elementti);
+  });
+
+  $("#poista_baarit").click(function () {
+    $("#baarikierroslista").empty();
+  });
+}
 
 async function hae_kaikki_baarit() {
   localStorage.clear();
@@ -39,9 +52,4 @@ $(document).ready(function () {
   hae_kaikki_baarit().then(listaa_baarit);
 
   lisaa_kasittelijat();
-
-  $("#testi_painike").click(function () {
-    let baarit = localStorage.getItem("baaritiedot");
-    console.log(baarit);
-  });
 });
