@@ -1,5 +1,9 @@
 function listaa_baarit() {
   let baarit = localStorage.getItem("baaritiedot");
+  let baarit_objekti = JSON.parse(baarit);
+  for (let i = 0; i < baarit_objekti.length; i++) {
+    console.log(baarit_objekti[i].nimi);
+  }
 }
 
 function lisaa_kasittelijat() {}
