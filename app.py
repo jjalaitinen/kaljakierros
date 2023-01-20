@@ -11,7 +11,7 @@ def etusivu():
 
 @app.route("/kaikki-baarit", methods=["GET"])
 def kaikki_baarit():
-    baarit_json = open("baarit.json")
+    baarit_json = open("baarit.json", encoding="UTF-8")
     baarit_lista = json.load(baarit_json)
     baarit_json.close()
     return jsonify(baarit_lista)
