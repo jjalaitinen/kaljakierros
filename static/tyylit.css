@@ -9,6 +9,32 @@ ul {
   padding: 0;
   margin: 0 !important;
 }
+body {
+  font-family:monospace !important;
+  font-size:x-large !important;
+}
+
+#baarikierrosnapit {
+  right:0;
+  bottom:0;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
+
+button {
+  background-color: #243763;
+  font-size:xx-large !important;
+  box-shadow: 5px #a6a6a6;
+  border-radius: 100% !important;
+  min-width: 75px;
+  min-height: 75px;
+  
+}
 
 #alkujorinat {
   background-color: #ffebb7;
@@ -17,7 +43,7 @@ ul {
   background-color: #ffebb7;
 }
 #baari_info {
-  background-color: #243763;
+  background-color: #ffebb7;
 }
 #loppuhorinat {
   background-color: #ffebb7;
