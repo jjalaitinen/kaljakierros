@@ -13,34 +13,33 @@ body {
   font-family:monospace !important;
   font-size:x-large !important;
 }
-
 #baarikierrosnapit {
-  right:0;
+  position: fixed;
   bottom:0;
-  padding-right: 5%;
-  padding-bottom: 5%;
-  height: 175px;
+  right:0;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  min-height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: fixed;
 }
 
 button {
   background-color: #243763;
   font-size:xx-large !important;
-  box-shadow: 5px #a6a6a6;
   border-radius: 100% !important;
   min-width: 75px;
+  max-width: 75px;
   min-height: 75px;
-  
+  max-height: 75px;
 }
-
 #alkujorinat {
   background-color: #ffebb7;
 }
-#toiminnallisuus {
+#toiminnallisuus {  
   background-color: #ffebb7;
+  min-height:100vh;
 }
 #baari_info {
   background-color: #ffebb7;
