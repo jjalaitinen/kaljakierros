@@ -1,8 +1,15 @@
+/* 
+#243763
+#FF6E31
+#FFEBB7
+#AD8E70
+*/
 ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 0;
+  margin: 0 !important;
 }
+
 #alkujorinat {
   background-color: #ffebb7;
 }
