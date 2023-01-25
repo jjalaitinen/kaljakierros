@@ -38,6 +38,27 @@ function lisaa_kasittelijat() {
   $("#poista_baarit").click(function () {
     $("#baarikierroslista").empty();
   });
+
+  $("#nayta_baarikierros").click(function () {
+    $("#baarikierros").css({"display": ""});
+    $("#baari_info").css({"display": "none"});
+    $("#karttasivu").css({"display": "none"});
+  });
+
+  $("#nayta_kaikki_baarit").click(function () {
+    $("#baari_info").css({"display": ""});
+    $("#baarikierros").css({"display": "none"});
+    $("#karttasivu").css({"display": "none"});
+  });
+
+  $("#nayta_kartta").click(function () {
+    $("#baari_info").css({"display": "none"});
+    $("#baarikierros").css({"display": "none"});
+    $("#karttasivu").css({"display": ""});
+  });
+
+
+
 }
 
 async function hae_kaikki_baarit() {
@@ -56,5 +77,7 @@ $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
+    $("#karttasivu").css({"display": "none"});
+    $("#baari_info").css({"display": "none"});
   });
 });
