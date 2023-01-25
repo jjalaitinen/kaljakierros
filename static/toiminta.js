@@ -1,10 +1,9 @@
-// Funktio tekee sille tuodusta oliosta elementin html-puuhun
+// Funktio tekee sille tuodusta oliosta <li> -elementin html-puuhun
 function luo_baari_elementti(baari) {
   let li = $("<li></li>");
-  let div = $("<div></div>");
-  let div_sisempi = $("<div></div>").text(baari.nimi);
+  let div = $("<div></div>").text(baari.nimi);
 
-  let baarilista_elementti = li.append(div).append(div_sisempi);
+  let baarilista_elementti = li.append(div);
   return baarilista_elementti;
 }
 
@@ -38,6 +37,9 @@ function lisaa_kasittelijat() {
   $("#poista_baarit").click(function () {
     $("#baarikierroslista").empty();
   });
+
+  let baarielementit = $("#kaikki_baarit").children();
+  console.log(baarielementit);
 }
 
 async function hae_kaikki_baarit() {
