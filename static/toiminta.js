@@ -109,14 +109,19 @@ function lisaa_kasittelijat() {
     $("#baarikierros").css({ display: "none" });
     $("#karttasivu").css({ display: "" });
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//      maxZoom: 18,
+//      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//    }).addTo(map);
+
+    googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
       maxZoom: 18,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      subdomains:['mt0','mt1','mt2','mt3']
     }).addTo(map);
 
     var bounds = [[62.239256, 25.735281],[62.246522, 25.749637],[62.243883, 25.758670],[62.235876, 25.742826]];
     map.setMaxBounds(bounds);
-    map.options.minZoom = 15; 
+    map.options.minZoom = 13; 
 
   });
 
