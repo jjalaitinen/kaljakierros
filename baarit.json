@@ -2,15 +2,15 @@
   {
     "nimi": "Freetime",
     "kuvaus": "Disko, karaoke, bilis ja opiskelijaystävälliset hinnat. Kaikki samassa paketissa",
-    "aukiolo": {
-      "maanantai": { "auki": "2200", "kiinni": "0430" },
-      "tiistai": { "auki": "2200", "kiinni": "0430" },
-      "keskiviikko": { "auki": "2200", "kiinni": "0430" },
-      "torstai": { "auki": "2200", "kiinni": "0430" },
-      "perjantai": { "auki": "2200", "kiinni": "0430" },
-      "lauantai": { "auki": "2200", "kiinni": "0430" },
-      "sunnuntai": { "auki": "2300", "kiinni": "0430" }
-    },
+    "aukiolo": [
+      { "viikonpaiva":"maanantai", "auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"tiistai","auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"keskiviikko","auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"torstai","auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"perjantai","auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"lauantai","auki": "2200", "kiinni": "0430" },
+       { "viikonpaiva":"sunnuntai","auki": "2300", "kiinni": "0430" }
+    ],
     "osoite": "Kauppakatu 30"
   },
   { "nimi": "Hemmingway's" },
