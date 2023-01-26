@@ -1,3 +1,5 @@
+var map;
+
 // Piilottaa ylimääräiset tiedot pois tieltä
 function piilota_tiedot() {
   let piilotettavat = document.getElementsByClassName("lisatieto");
@@ -106,6 +108,16 @@ function lisaa_kasittelijat() {
     $("#baari_info").css({ display: "none" });
     $("#baarikierros").css({ display: "none" });
     $("#karttasivu").css({ display: "" });
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var bounds = [[62.239256, 25.735281],[62.246522, 25.749637],[62.243883, 25.758670],[62.235876, 25.742826]];
+    map.setMaxBounds(bounds);
+    map.options.minZoom = 15; 
+
   });
 
   var spans = $("span");
@@ -128,25 +140,10 @@ async function hae_kaikki_baarit() {
 
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
+    map = L.map('map').setView([62.2426, 25.7473], 18);
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
-
-    var map = L.map('map').setView([62.2426, 25.7473], 18);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    var bounds = [[62.239, 25.735],[62.243, 25.757]];
-    
-
-    L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(map);
-    
-    map.fitBounds(latlngs); 
-    map.setMaxBounds(latlngs);
-    map.options.minZoom = map.getZoom(); 
   });
 });
