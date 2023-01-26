@@ -1,9 +1,61 @@
+// Piilottaa ylimääräiset tiedot pois tieltä
+function piilota_tiedot() {
+  let piilotettavat = document.getElementsByClassName("lisatieto");
+  for (let i = 0; i < piilotettavat.length; i++) {
+    piilotettavat[i].style.display = "none";
+  }
+}
+
+// Funktio listaa klikatun spanin tiedot nimen alle
+function nayta_tiedot(e) {
+  e.preventDefault();
+  let target = e.target;
+  let parent = target.parentElement;
+  let naytettavat_tiedot = parent.parentNode.childNodes;
+
+  if (naytettavat_tiedot[1].style.display == "none") {
+    piilota_tiedot();
+    naytettavat_tiedot[1].style.display = "";
+  } else {
+    piilota_tiedot();
+    naytettavat_tiedot[1].style.display = "none";
+  }
+}
+
 // Funktio tekee sille tuodusta oliosta <li> -elementin html-puuhun
 function luo_baari_elementti(baari) {
-  let li = $("<li></li>");
-  let div = $("<div></div>").text(baari.nimi);
+  let kuvaus = baari.kuvaus;
+  let osoite = baari.osoite;
+  let aukiolo = baari.aukiolo;
+  let nimi = baari.nimi;
 
-  let baarilista_elementti = li.append(div);
+  let li = $("<li></li>");
+
+  let div_nimi = $("<div></div>");
+  let span_nimi = $("<span></span>").text(nimi);
+  let nimi_elementti = div_nimi.append(span_nimi);
+
+  let div_kuvaus = $("<div></div>");
+  let span_kuvaus = $("<span></span>").text(kuvaus);
+  let kuvaus_elementti = div_kuvaus.append(span_kuvaus);
+
+  let div_aukiolo = $("<div></div>");
+  let span_aukiolo = $("<span></span>").text(aukiolo);
+  let aukiolo_elementti = div_aukiolo.append(span_aukiolo);
+
+  let div_osoite = $("<div></div>");
+  let span_osoite = $("<span></span>").text(osoite);
+  let osoite_elementti = div_osoite.append(span_osoite);
+
+  let lisatieto_elementti = $("<div></div>")
+    .append(kuvaus_elementti)
+    .append(aukiolo_elementti)
+    .append(osoite_elementti);
+  lisatieto_elementti.addClass("lisatieto").css("display", "none");
+
+  let baarilista_elementti = li
+    .append(nimi_elementti)
+    .append(lisatieto_elementti);
   return baarilista_elementti;
 }
 
@@ -55,6 +107,11 @@ function lisaa_kasittelijat() {
     $("#baarikierros").css({ display: "none" });
     $("#karttasivu").css({ display: "" });
   });
+
+  var spans = $("span");
+  for (let i = 0; i < spans.length; i++) {
+    spans[i].addEventListener("click", nayta_tiedot);
+  }
 }
 
 async function hae_kaikki_baarit() {
