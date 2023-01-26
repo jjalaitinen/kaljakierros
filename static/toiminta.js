@@ -75,5 +75,21 @@ $(document).ready(function () {
     lisaa_kasittelijat();
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
+
+    var map = L.map('map').setView([62.2426, 25.7473], 18);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var bounds = [[62.239, 25.735],[62.243, 25.757]];
+    
+
+    L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(map);
+    
+    map.fitBounds(latlngs); 
+    map.setMaxBounds(latlngs);
+    map.options.minZoom = map.getZoom(); 
   });
 });
