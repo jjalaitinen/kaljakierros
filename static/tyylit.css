@@ -79,6 +79,7 @@ Oikeaan reunaan alas päällekkäin.
   padding-bottom: 1%;
     
   position: fixed;
+   z-index: 10000; 
   bottom:0;
   left:0;
   min-width: 100%;
