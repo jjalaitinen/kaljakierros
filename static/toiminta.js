@@ -22,6 +22,22 @@ function nayta_tiedot(e) {
   }
 }
 
+function luo_aukiolot(aukiolo_obj) {
+  let ul = $("<ul></ul>");
+  console.log(aukiolo_obj);
+
+  for (let i = 0; i < aukiolo_obj.length; i++) {
+    let viikonpaiva = aukiolo_obj[i].viikonpaiva;
+    let auki = aukiolo_obj[i].auki;
+    let kiinni = aukiolo_obj[i].kiinni;
+
+    let li = $("<li></li>").text(viikonpaiva + " " + auki + " - " + kiinni);
+    ul.append(li);
+  }
+
+  return ul;
+}
+
 // Funktio tekee sille tuodusta oliosta <li> -elementin html-puuhun
 function luo_baari_elementti(baari) {
   let kuvaus = baari.kuvaus;
@@ -40,8 +56,13 @@ function luo_baari_elementti(baari) {
   let kuvaus_elementti = div_kuvaus.append(span_kuvaus);
 
   let div_aukiolo = $("<div></div>");
-  let span_aukiolo = $("<span></span>").text(aukiolo);
-  let aukiolo_elementti = div_aukiolo.append(span_aukiolo);
+  let aukiolo_elem = "";
+  if (typeof aukiolo === "undefined") {
+    aukiolo_elem = $("<ul></ul>");
+  } else {
+    aukiolo_elem = luo_aukiolot(aukiolo);
+  }
+  let aukiolo_elementti = div_aukiolo.append(aukiolo_elem);
 
   let div_osoite = $("<div></div>");
   let span_osoite = $("<span></span>").text(osoite);
@@ -133,20 +154,23 @@ $(document).ready(function () {
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
 
-    var map = L.map('map').setView([62.2426, 25.7473], 18);
+    var map = L.map("map").setView([62.2426, 25.7473], 18);
 
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      attribution:
+        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
-    var bounds = [[62.239, 25.735],[62.243, 25.757]];
-    
+    var bounds = [
+      [62.239, 25.735],
+      [62.243, 25.757],
+    ];
 
-    L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(map);
-    
-    map.fitBounds(latlngs); 
+    L.rectangle(bounds, { color: "#ff7800", weight: 1 }).addTo(map);
+
+    map.fitBounds(latlngs);
     map.setMaxBounds(latlngs);
-    map.options.minZoom = map.getZoom(); 
+    map.options.minZoom = map.getZoom();
   });
 });
