@@ -68,6 +68,10 @@ ul {
   margin: 0 !important;
 }
 
+html, body {
+  background-color: #ffebb7 !important;
+}
+
 html {
   scrollbar-width: none; /* Firefox scrollbar piiloon */
 }

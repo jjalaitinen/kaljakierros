@@ -4,6 +4,11 @@
   background-color: #ffebb7;
 }
 
+
+#baarikierroslista {
+  margin-bottom: 4em !important;
+}
+
 /* Baarinlisäämisnapin ja listannollausnapin divi
 Oikeaan reunaan alas päällekkäin.
 */
