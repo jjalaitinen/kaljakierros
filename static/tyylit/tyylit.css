@@ -68,10 +68,20 @@ ul {
   margin: 0 !important;
 }
 
+html {
+  scrollbar-width: none; /* Firefox scrollbar piiloon */
+}
 /* Globaali fontti ja isona ainakin toistaiseksi*/
+
 body {
   font-family: "roboto_monoregular" !important;
   font-size: large !important;
+  -ms-overflow-style: none; /* Edge ja IE scrollbar piiloon */
+}
+
+/* Chrome, Safari ja Opera scrollbar piiloon */
+::-webkit-scrollbar {
+  display: none;
 }
 
 #alapalkki {
