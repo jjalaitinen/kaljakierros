@@ -51,6 +51,7 @@ function luo_baari_elementti(baari) {
 
   let div_nimi = $("<div></div>");
   let span_nimi = $("<span></span>").text(nimi);
+  span_nimi.addClass("baari");
   let nimi_elementti = div_nimi.append(span_nimi);
 
   let div_kuvaus = $("<div></div>");
@@ -172,7 +173,7 @@ $(document).ready(function () {
     lisaa_kasittelijat();
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
- 
+
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       attribution:
@@ -183,7 +184,7 @@ $(document).ready(function () {
       [62.239172, 25.734671],
       [62.246546, 25.750505],
       [62.243717, 25.759753],
-      [62.235420, 25.742759]
+      [62.23542, 25.742759],
     ];
 
     map.fitBounds(bounds);

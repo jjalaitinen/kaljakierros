@@ -13,8 +13,8 @@ ul {
 
 /* Globaali fontti ja isona ainakin toistaiseksi*/
 body {
-  font-family:monospace !important;
-  font-size:x-large !important;
+  font-family: monospace !important;
+  font-size: x-large !important;
 }
 
 /* Baarinlisäämisnapin ja listannollausnapin divi
@@ -22,8 +22,8 @@ Oikeaan reunaan alas päällekkäin.
 */
 #baarikierrosnapit {
   position: fixed;
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
   margin-right: 5%;
   margin-bottom: 12vh;
   min-height: 175px;
@@ -35,7 +35,7 @@ Oikeaan reunaan alas päällekkäin.
 /*baarikierrosnappien kokoa ja väriä*/
 #baarikierrosnapit button {
   background-color: #243763;
-  font-size:xx-large !important;
+  font-size: xx-large !important;
   border-radius: 100% !important;
   min-width: 75px;
   max-width: 75px;
@@ -44,21 +44,24 @@ Oikeaan reunaan alas päällekkäin.
 }
 
 #baarikierros {
-  min-height:100vh;
+  min-height: 100vh;
   background-color: #ffebb7;
-
 }
 #alkujorinat {
 }
 
-#toiminnallisuus {  
+#toiminnallisuus {
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-
 #baari_info {
   background-color: #ffebb7;
+}
+
+.baari:hover {
+  cursor: pointer;
+  color: grey;
 }
 
 #karttasivu {
@@ -70,28 +73,28 @@ Oikeaan reunaan alas päällekkäin.
 }
 
 #alapalkki {
-  background-color: #AD8E70;
+  background-color: #ad8e70;
   display: flex;
   justify-content: space-between;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 1%;
   padding-bottom: 1%;
-    
+
   position: fixed;
-   z-index: 10000; 
-  bottom:0;
-  left:0;
+  z-index: 10000;
+  bottom: 0;
+  left: 0;
   min-width: 100%;
-  width:100%;
+  width: 100%;
 }
 
 #alapalkki button {
   border: none;
-  background-color: #AD8E70; 
+  background-color: #ad8e70;
 }
 
-#map { 
+#map {
   height: 100vh;
   width: 100vw;
 }
