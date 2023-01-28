@@ -1,0 +1,9 @@
+
+#baari_info {
+  background-color: #ffebb7;
+}
+
+.baari:hover {
+  cursor: pointer;
+  color: grey;
+}

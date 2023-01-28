@@ -1,0 +1,36 @@
+
+#baarikierros {
+  min-height: 100vh;
+  background-color: #ffebb7;
+}
+
+/* Baarinlisäämisnapin ja listannollausnapin divi
+Oikeaan reunaan alas päällekkäin.
+*/
+#baarikierrosnapit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 5%;
+  margin-bottom: 12vh;
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*baarikierrosnappien kokoa ja väriä*/
+#baarikierrosnapit button {
+  background-color: #243763;
+  font-size: xx-large !important;
+  border-radius: 100% !important;
+  min-width: 75px;
+  max-width: 75px;
+  min-height: 75px;
+  max-height: 75px;
+}
+
+#toiminnallisuus {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
