@@ -172,8 +172,7 @@ $(document).ready(function () {
     lisaa_kasittelijat();
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
-
-    
+ 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       attribution:
@@ -181,11 +180,11 @@ $(document).ready(function () {
     }).addTo(map);
 
     var bounds = [
-      [62.239, 25.735],
-      [62.243, 25.757],
+      [62.239172, 25.734671],
+      [62.246546, 25.750505],
+      [62.243717, 25.759753],
+      [62.235420, 25.742759]
     ];
-
-   
 
     map.fitBounds(bounds);
     map.setMaxBounds(bounds);
