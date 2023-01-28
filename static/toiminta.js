@@ -1,32 +1,18 @@
 var map;
 
-// Piilottaa ylimääräiset tiedot pois tieltä
-function piilota_tiedot() {
-  let piilotettavat = document.getElementsByClassName("lisatieto");
-  for (let i = 0; i < piilotettavat.length; i++) {
-    piilotettavat[i].style.display = "none";
-  }
-}
-
 // Funktio listaa klikatun spanin tiedot nimen alle
 function nayta_tiedot(e) {
   e.preventDefault();
-  let target = e.target;
-  let parent = target.parentElement;
-  let naytettavat_tiedot = parent.parentNode.childNodes;
-
-  if (naytettavat_tiedot[1].style.display == "none") {
-    piilota_tiedot();
-    naytettavat_tiedot[1].style.display = "";
-  } else {
-    piilota_tiedot();
-    naytettavat_tiedot[1].style.display = "none";
-  }
+  //let id = e.target.parentNode.parentNode.id;
+  let target = $(e.target);
+  let lisatieto = target.parent().parent().children(".lisatieto").first();
+  var oliJoPiilossa = lisatieto.css("display") == "none" 
+  $( ".lisatieto" ).css( {display: "none"} );
+  if (oliJoPiilossa) lisatieto.css({display:""});
 }
 
 function luo_aukiolot(aukiolo_obj) {
   let ul = $("<ul></ul>");
-  console.log(aukiolo_obj);
 
   for (let i = 0; i < aukiolo_obj.length; i++) {
     let viikonpaiva = aukiolo_obj[i].viikonpaiva;
@@ -51,7 +37,7 @@ function luo_baari_elementti(baari) {
 
   let div_nimi = $("<div></div>");
   let span_nimi = $("<span></span>").text(nimi);
-  span_nimi.addClass("baari");
+  span_nimi.addClass("baarin_nimi");
   let nimi_elementti = div_nimi.append(span_nimi);
 
   let div_kuvaus = $("<div></div>");
@@ -94,6 +80,7 @@ function listaa_kaikki_baarit() {
   for (let i = 0; i < baarit_objekti.length; i++) {
     let baari = baarit_objekti[i];
     let baarilista_elementti = luo_baari_elementti(baari);
+    baarilista_elementti.attr("id", baari["nimi"]);
     $("#kaikki_baarit").append(baarilista_elementti);
   }
 }
@@ -148,10 +135,8 @@ function lisaa_kasittelijat() {
     map.options.minZoom = 15;
   });
 
-  var spans = $("span");
-  for (let i = 0; i < spans.length; i++) {
-    spans[i].addEventListener("click", nayta_tiedot);
-  }
+  $(".baarin_nimi").click(nayta_tiedot)
+
 }
 
 async function hae_kaikki_baarit() {
@@ -169,10 +154,11 @@ async function hae_kaikki_baarit() {
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
     map = L.map("map").setView([62.2426, 25.7473], 18);
-    listaa_kaikki_baarit();
-    lisaa_kasittelijat();
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
+    listaa_kaikki_baarit();
+    lisaa_kasittelijat();
+    
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
