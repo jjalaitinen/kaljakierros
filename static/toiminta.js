@@ -97,6 +97,13 @@ function listaa_kaikki_baarit() {
   }
 }
 
+function nayta_sivu(sivun_id) {
+  $("#baarikierros").css({ display: "none" });
+  $("#baari_info").css({ display: "none" });
+  $("#karttasivu").css({ display: "none" });
+  $(sivun_id).css({ display: "" });
+}
+
 function lisaa_kasittelijat() {
   var kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
   $("#lisaa_baari").click(function () {
@@ -114,21 +121,15 @@ function lisaa_kasittelijat() {
   });
 
   $("#nayta_baarikierros").click(function () {
-    $("#baarikierros").css({ display: "" });
-    $("#baari_info").css({ display: "none" });
-    $("#karttasivu").css({ display: "none" });
+    nayta_sivu("#baarikierros");
   });
 
   $("#nayta_kaikki_baarit").click(function () {
-    $("#baari_info").css({ display: "" });
-    $("#baarikierros").css({ display: "none" });
-    $("#karttasivu").css({ display: "none" });
+    nayta_sivu("#baari_info");
   });
 
   $("#nayta_kartta").click(function () {
-    $("#baari_info").css({ display: "none" });
-    $("#baarikierros").css({ display: "none" });
-    $("#karttasivu").css({ display: "" });
+    nayta_sivu("#karttasivu");
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
@@ -172,8 +173,7 @@ $(document).ready(function () {
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
 
-    var map = L.map("map").setView([62.2426, 25.7473], 18);
-
+    
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
       attribution:
@@ -185,10 +185,10 @@ $(document).ready(function () {
       [62.243, 25.757],
     ];
 
-    L.rectangle(bounds, { color: "#ff7800", weight: 1 }).addTo(map);
+   
 
-    map.fitBounds(latlngs);
-    map.setMaxBounds(latlngs);
+    map.fitBounds(bounds);
+    map.setMaxBounds(bounds);
     map.options.minZoom = map.getZoom();
   });
 });
