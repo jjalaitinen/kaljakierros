@@ -8,7 +8,13 @@ function nayta_tiedot(e) {
   let lisatieto = target.parent().parent().children(".lisatieto").first();
   var oliJoPiilossa = lisatieto.css("display") == "none";
   $(".lisatieto").css({ display: "none" });
-  if (oliJoPiilossa) lisatieto.css({ display: "" });
+  $(".lisatieto").parent().css({ filter: "blur(1px) brightness(80%)" });
+  if (oliJoPiilossa) {
+    lisatieto.parent().css({ filter: "" });
+    lisatieto.css({ display: "" });
+  } else {
+    $(".lisatieto").parent().css({ filter: "" });
+  }
 }
 
 function luo_aukiolot(aukiolo_obj) {
