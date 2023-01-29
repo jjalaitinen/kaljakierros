@@ -1,12 +1,11 @@
-
 #baarikierros {
+  margin-top: 2em;
   min-height: 100vh;
   background-color: #ffebb7;
 }
 
-
 #baarikierroslista {
-  margin-bottom: 4em !important;
+  margin-bottom: 4em;
 }
 
 /* Baarinlisäämisnapin ja listannollausnapin divi
@@ -27,8 +26,8 @@ Oikeaan reunaan alas päällekkäin.
 /*baarikierrosnappien kokoa ja väriä*/
 #baarikierrosnapit button {
   background-color: #243763;
-  font-size: xx-large !important;
-  border-radius: 100% !important;
+  font-size: xx-large;
+  border-radius: 100%;
   min-width: 75px;
   max-width: 75px;
   min-height: 75px;

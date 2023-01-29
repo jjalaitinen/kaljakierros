@@ -65,11 +65,15 @@
 /* Poistetaan kaikista listoista marker ja margin */
 ul {
   list-style-type: none;
-  margin: 0 !important;
+  margin: 0;
+  padding: 0;
 }
 
-html, body {
-  background-color: #ffebb7 !important;
+html,
+body {
+  margin: 0;
+  background-color: #ffebb7;
+  text-align: center;
 }
 
 html {
@@ -78,8 +82,8 @@ html {
 /* Globaali fontti ja isona ainakin toistaiseksi*/
 
 body {
-  font-family: "roboto_monoregular" !important;
-  font-size: large !important;
+  font-family: "roboto_monoregular";
+  font-size: large;
   -ms-overflow-style: none; /* Edge ja IE scrollbar piiloon */
 }
 
@@ -101,8 +105,8 @@ body {
   z-index: 10000;
   bottom: 0;
   left: 0;
-  min-width: 100%;
-  width: 100%;
+  min-width: 80%;
+  width: 80%;
 }
 
 #alapalkki button {

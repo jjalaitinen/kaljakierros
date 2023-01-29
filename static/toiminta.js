@@ -6,9 +6,9 @@ function nayta_tiedot(e) {
   //let id = e.target.parentNode.parentNode.id;
   let target = $(e.target);
   let lisatieto = target.parent().parent().children(".lisatieto").first();
-  var oliJoPiilossa = lisatieto.css("display") == "none" 
-  $( ".lisatieto" ).css( {display: "none"} );
-  if (oliJoPiilossa) lisatieto.css({display:""});
+  var oliJoPiilossa = lisatieto.css("display") == "none";
+  $(".lisatieto").css({ display: "none" });
+  if (oliJoPiilossa) lisatieto.css({ display: "" });
 }
 
 function luo_aukiolot(aukiolo_obj) {
@@ -19,7 +19,10 @@ function luo_aukiolot(aukiolo_obj) {
     let auki = aukiolo_obj[i].auki;
     let kiinni = aukiolo_obj[i].kiinni;
 
-    let li = $("<li></li>").text(viikonpaiva + " " + auki + " - " + kiinni);
+    let li = $("<li></li>");
+    let viikonpaiva_span = $("<span></span>").text(viikonpaiva);
+    let ajat_span = $("<span></span>").text(auki + " - " + kiinni);
+    li.append(viikonpaiva_span).append(ajat_span);
     ul.append(li);
   }
 
@@ -135,8 +138,7 @@ function lisaa_kasittelijat() {
     map.options.minZoom = 15;
   });
 
-  $(".baarin_nimi").click(nayta_tiedot)
-
+  $(".baarin_nimi").click(nayta_tiedot);
 }
 
 async function hae_kaikki_baarit() {
@@ -158,7 +160,6 @@ $(document).ready(function () {
     $("#baari_info").css({ display: "none" });
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
-    
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18,
