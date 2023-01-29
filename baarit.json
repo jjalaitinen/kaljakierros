@@ -91,7 +91,7 @@
       { "viikonpaiva": "tiistai", "auki": "sul", "kiinni": "jettu" },
       { "viikonpaiva": "keskiviikko", "auki": "1600", "kiinni": "0200" },
       { "viikonpaiva": "torstai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "perjantai", "auki": "1600", "kiinni": "020" },
+      { "viikonpaiva": "perjantai", "auki": "1600", "kiinni": "0200" },
       { "viikonpaiva": "lauantai", "auki": "1600", "kiinni": "0300" },
       { "viikonpaiva": "sunnuntai", "auki": "sul", "kiinni": "jettu" }
     ],

@@ -12,14 +12,14 @@ function nayta_tiedot(e) {
 }
 
 function luo_aukiolot(aukiolo_obj) {
-  let ul = $("<ul></ul>");
+  let ul = $("<ul></ul>").addClass("aukiololista");
 
   for (let i = 0; i < aukiolo_obj.length; i++) {
     let viikonpaiva = aukiolo_obj[i].viikonpaiva;
     let auki = aukiolo_obj[i].auki;
     let kiinni = aukiolo_obj[i].kiinni;
 
-    let li = $("<li></li>");
+    let li = $("<li></li>").addClass("aukioloalkio");
     let viikonpaiva_span = $("<span></span>").text(viikonpaiva);
     let ajat_span = $("<span></span>").text(auki + " - " + kiinni);
     li.append(viikonpaiva_span).append(ajat_span);

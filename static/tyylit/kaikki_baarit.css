@@ -11,3 +11,28 @@
 #kaikki_baarit {
   margin-bottom: 4em !important;
 }
+
+.lisatieto {
+  border: 3px dotted rgba(0, 0, 0, 0.3);
+}
+
+.lisatieto div {
+  margin-bottom: 1em;
+}
+
+.aukiololista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aukioloalkio {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 500px;
+}
+
+.aukioloalkio span {
+  text-align: left;
+}
