@@ -116,6 +116,11 @@ body {
   background-color: #ad8e70;
 }
 
+/* Alabarin valittuna oleva button */
+.valittuna svg {
+  fill: rgb(174, 174, 174);
+}
+
 h1 {
   font-family: "windsorbold";
 }

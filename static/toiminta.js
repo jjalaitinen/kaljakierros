@@ -1,5 +1,12 @@
 var map;
 
+// Annettua id:tä vastaava (alabarin) nappi aktivoidaan ja muut deaktivoidaan
+function vaihda_aktiivinen_nappi(nappi_id) {
+  $("#alapalkki").children().removeClass("valittuna");
+  $(nappi_id).addClass("valittuna");
+  return;
+}
+
 // Funktio listaa klikatun spanin tiedot nimen alle
 function nayta_tiedot(e) {
   e.preventDefault();
@@ -118,14 +125,17 @@ function lisaa_kasittelijat() {
   });
 
   $("#nayta_baarikierros").click(function () {
+    vaihda_aktiivinen_nappi("#nayta_baarikierros");
     nayta_sivu("#baarikierros");
   });
 
   $("#nayta_kaikki_baarit").click(function () {
+    vaihda_aktiivinen_nappi("#nayta_kaikki_baarit");
     nayta_sivu("#baari_info");
   });
 
   $("#nayta_kartta").click(function () {
+    vaihda_aktiivinen_nappi("#nayta_kartta");
     nayta_sivu("#karttasivu");
 
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
