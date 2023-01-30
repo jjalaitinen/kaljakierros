@@ -189,7 +189,6 @@ $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
     map = L.map("map").setView([62.2426, 25.7473], 16);
     nayta_sivu("#baarikierros");
-    piilota_muut_kuin_etusivu();
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
     mapin_alustus();
