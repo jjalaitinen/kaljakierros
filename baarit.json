@@ -3,154 +3,499 @@
     "nimi": "Freetime",
     "kuvaus": "Disko, karaoke, bilis ja opiskelijaystävälliset hinnat. Kaikki samassa paketissa",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "tiistai", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "keskiviikko", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "torstai", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "perjantai", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "lauantai", "auki": "2200", "kiinni": "0430" },
-      { "viikonpaiva": "sunnuntai", "auki": "2300", "kiinni": "0430" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "2200",
+        "kiinni": "0430"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "2300",
+        "kiinni": "0430"
+      }
     ],
-    "osoite": "Kauppakatu 30"
+    "osoite": "Kauppakatu 30",
+    "sijainti": [62.243946562484304, 25.74936654459633]
   },
   {
     "nimi": "Hemmingway's",
     "kuvaus": "Rauhallinen, opiskelijaystävällinen ja laaja juomavalikoima. Alakerrassa biljardi ja pöytiin voi lainata lautapelejä.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "1400", "kiinni": "0200" },
-      { "viikonpaiva": "tiistai", "auki": "1400", "kiinni": "0200" },
-      { "viikonpaiva": "keskiviikko", "auki": "1400", "kiinni": "0200" },
-      { "viikonpaiva": "torstai", "auki": "1400", "kiinni": "0200" },
-      { "viikonpaiva": "perjantai", "auki": "1400", "kiinni": "0300" },
-      { "viikonpaiva": "lauantai", "auki": "1400", "kiinni": "0300" },
-      { "viikonpaiva": "sunnuntai", "auki": "1400", "kiinni": "0200" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "1400",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "1400",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1400",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1400",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1400",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1400",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "1400",
+        "kiinni": "0200"
+      }
     ],
-    "osoite": "Kauppakatu 32"
+    "osoite": "Kauppakatu 32",
+    "sijainti": [62.24400363528134, 25.750461227139617]
   },
   {
     "nimi": "Poppari",
     "kuvaus": "Jazzklubi.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "1900", "kiinni": "0500" },
-      { "viikonpaiva": "tiistai", "auki": "1900", "kiinni": "0500" },
-      { "viikonpaiva": "keskiviikko", "auki": "1600", "kiinni": "0500" },
-      { "viikonpaiva": "torstai", "auki": "1600", "kiinni": "0500" },
-      { "viikonpaiva": "perjantai", "auki": "1600", "kiinni": "0500" },
-      { "viikonpaiva": "lauantai", "auki": "1900", "kiinni": "0500" },
-      { "viikonpaiva": "sunnuntai", "auki": "2300", "kiinni": "0500" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "1900",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "1900",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1600",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1600",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1600",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1900",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "2300",
+        "kiinni": "0500"
+      }
     ],
-    "osoite": "Puistokatu 2–4 (Aren aukio, käynti Ilmarisenkadun puolelta)"
+    "osoite": "Puistokatu 2–4 (Aren aukio, käynti Ilmarisenkadun puolelta)",
+    "sijainti": [62.244796923408714, 25.751193359943038]
   },
   {
     "nimi": "Lucky",
     "kuvaus": "Kirkkopuiston laidalla sijaitseva irkku-tyylinen pubi. Opiskelija-alea tarjolla.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "tiistai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "keskiviikko", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "torstai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "perjantai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "lauantai", "auki": "1700", "kiinni": "0200" },
-      { "viikonpaiva": "sunnuntai", "auki": "Sul", "kiinni": "jettu" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1700",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "Sul",
+        "kiinni": "jettu"
+      }
     ],
-    "osoite": "Puistokatu 2–4 (Aren aukio, käynti Ilmarisenkadun puolelta)"
+    "osoite": "Gummeruksenkatu 7, 40100 Jyväskylä",
+    "sijainti": [62.24024242038886, 25.743619805976852]
   },
   {
     "nimi": "Redneck",
     "kuvaus": "Rokkibaari.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "1800", "kiinni": "2200" },
-      { "viikonpaiva": "tiistai", "auki": "1800", "kiinni": "2200" },
-      { "viikonpaiva": "keskiviikko", "auki": "1800", "kiinni": "0000" },
-      { "viikonpaiva": "torstai", "auki": "1800", "kiinni": "0000" },
-      { "viikonpaiva": "perjantai", "auki": "1800", "kiinni": "0300" },
-      { "viikonpaiva": "lauantai", "auki": "1800", "kiinni": "0300" },
-      { "viikonpaiva": "sunnuntai", "auki": "1800", "kiinni": "2200" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "1800",
+        "kiinni": "2200"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "1800",
+        "kiinni": "2200"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1800",
+        "kiinni": "0000"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1800",
+        "kiinni": "0000"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1800",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1800",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "1800",
+        "kiinni": "2200"
+      }
     ],
-    "osoite": "Asemakatu 7"
+    "osoite": "Asemakatu 7",
+    "sijainti": [62.24273009072573, 25.747817390632864]
   },
   {
     "nimi": "Escape",
     "kuvaus": "Paskin baari koko Jyväskylässä. Älä mene, ellei ole pakko.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "Sul", "kiinni": "jettu" },
-      { "viikonpaiva": "tiistai", "auki": "Sul", "kiinni": "jettu" },
-      { "viikonpaiva": "keskiviikko", "auki": "2200", "kiinni": "0500" },
-      { "viikonpaiva": "torstai", "auki": "2200", "kiinni": "0500" },
-      { "viikonpaiva": "perjantai", "auki": "2200", "kiinni": "0500" },
-      { "viikonpaiva": "lauantai", "auki": "2200", "kiinni": "0500" },
-      { "viikonpaiva": "sunnuntai", "auki": "Sul", "kiinni": "jettu" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "Sul",
+        "kiinni": "jettu"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "Sul",
+        "kiinni": "jettu"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "2200",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "2200",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "2200",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "2200",
+        "kiinni": "0500"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "Sul",
+        "kiinni": "jettu"
+      }
     ],
-    "osoite": "Kauppakatu 32"
+    "osoite": "Kauppakatu 32",
+    "sijainti": [62.24426061677968, 25.74995615994261]
   },
   {
     "nimi": "Café Europa",
     "kuvaus": "DJ soittaa pienessä renesanssi tyyliin verhoillussa kuppilassa levyjä ja cocktailit mahdollisia.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "sul", "kiinni": "jettu" },
-      { "viikonpaiva": "tiistai", "auki": "sul", "kiinni": "jettu" },
-      { "viikonpaiva": "keskiviikko", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "torstai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "perjantai", "auki": "1600", "kiinni": "0200" },
-      { "viikonpaiva": "lauantai", "auki": "1600", "kiinni": "0300" },
-      { "viikonpaiva": "sunnuntai", "auki": "sul", "kiinni": "jettu" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "sul",
+        "kiinni": "jettu"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "sul",
+        "kiinni": "jettu"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1600",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1600",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "sul",
+        "kiinni": "jettu"
+      }
     ],
-    "osoite": "Kauppalaispiha 1"
+    "osoite": "Kauppalaispiha 1",
+    "sijainti": [62.243691701954184, 25.746426853025838]
   },
   {
     "nimi": "Revolution",
     "kuvaus": "Pääkallopaikalla sijaitseva baari, jossa saa tanssia pöydillä. DJ, ympyräbaari urheilun seuraamista varten. Keittiö palvelee päivisin ja alkuillasta.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "1100", "kiinni": "0200" },
-      { "viikonpaiva": "tiistai", "auki": "1100", "kiinni": "0200" },
-      { "viikonpaiva": "keskiviikko", "auki": "1100", "kiinni": "0300" },
-      { "viikonpaiva": "torstai", "auki": "1100", "kiinni": "0200" },
-      { "viikonpaiva": "perjantai", "auki": "1100", "kiinni": "0200" },
-      { "viikonpaiva": "lauantai", "auki": "1100", "kiinni": "0300" },
-      { "viikonpaiva": "sunnuntai", "auki": "1200", "kiinni": "0200" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "1100",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "1100",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "1100",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "1100",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "1100",
+        "kiinni": "0200"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "1100",
+        "kiinni": "0300"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "1200",
+        "kiinni": "0200"
+      }
     ],
-    "osoite": "Kauppakatu 30"
+    "osoite": "Kauppakatu 30",
+    "sijainti": [62.2439265764581, 25.749495290633774]
   },
   {
     "nimi": "Pataässä",
     "kuvaus": "Karaokebaari, joka operoi isoissa tiloissa. Jatkot löytyy täältä.",
     "aukiolo": [
-      { "viikonpaiva": "maanantai", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "tiistai", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "keskiviikko", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "torstai", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "perjantai", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "lauantai", "auki": "2000", "kiinni": "0600" },
-      { "viikonpaiva": "sunnuntai", "auki": "2000", "kiinni": "0600" }
+      {
+        "viikonpaiva": "maanantai",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "tiistai",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "keskiviikko",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "torstai",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "perjantai",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "lauantai",
+        "auki": "2000",
+        "kiinni": "0600"
+      },
+      {
+        "viikonpaiva": "sunnuntai",
+        "auki": "2000",
+        "kiinni": "0600"
+      }
     ],
-    "osoite": "Väinönkatu 26"
+    "osoite": "Väinönkatu 26",
+    "sijainti": [62.244622055069904, 25.749044629251113]
   },
-  { "nimi": "Ravintola Mutka" },
-  { "nimi": "Heidi's Bier Bar" },
-  { "nimi": "Radio Cafe" },
-  { "nimi": "DeLorean" },
-  { "nimi": "Hiisi Taproom & Bottleshop" },
-  { "nimi": "Explosive Bar" },
-  { "nimi": "Ylä-Ruth" },
-  { "nimi": "Musta Kynnys" },
-  { "nimi": "Teerenpeli" },
-  { "nimi": "Matsi" },
-  { "nimi": "Harry's" },
-  { "nimi": "Jalo" },
-  { "nimi": "Hollywood Bowling & Billiards" },
-  { "nimi": "Karaoke Pub Resina" },
-  { "nimi": "Helmi" },
-  { "nimi": "London" },
-  { "nimi": "Sohwi" },
-  { "nimi": "Vakiopaine" },
-  { "nimi": "Yläkaupungin Ale Pub" },
-  { "nimi": "Vihreä Haltiatar" },
-  { "nimi": "Musta Magia" },
-  { "nimi": "Cheers" },
-  { "nimi": "Green Egg" },
-  { "nimi": "Amarillo" },
-  { "nimi": "Sataman Viilu" },
-  { "nimi": "Ravintola Alakulma" },
-  { "nimi": "Bar Moe's" },
-  { "nimi": "Proud Mary Pub" }
+  {
+    "nimi": "Ravintola Mutka",
+    "sijainti": [62.24406275099856, 25.747713067362948]
+  },
+  {
+    "nimi": "Heidi's Bier Bar",
+    "sijainti": [62.24481178022476, 25.747620375288797]
+  },
+  {
+    "nimi": "Radio Cafe",
+    "sijainti": [62.24708839134031, 25.755353529252908]
+  },
+  {
+    "nimi": "DeLorean",
+    "sijainti": [62.24397758961901, 25.74904582132564]
+  },
+  {
+    "nimi": "Hiisi Taproom & Bottleshop",
+    "sijainti": [62.23952747501409, 25.7540463371726]
+  },
+  {
+    "nimi": "Explosive Bar",
+    "sijainti": [62.24494229317698, 25.7500845059803]
+  },
+  {
+    "nimi": "Ylä-Ruth",
+    "sijainti": [62.23818746476843, 25.73719859855498]
+  },
+  {
+    "nimi": "Musta Kynnys",
+    "sijainti": [62.24088470102405, 25.75211185993997]
+  },
+  {
+    "nimi": "Teerenpeli",
+    "sijainti": [62.24423638670479, 25.750210005979792]
+  },
+  {
+    "nimi": "Matsi Bar",
+    "sijainti": [62.243365939840665, 25.745636686095004]
+  },
+  {
+    "nimi": "Harry's",
+    "sijainti": [62.2440065387846, 25.749655250981416]
+  },
+  {
+    "nimi": "Jalo",
+    "sijainti": [62.24138335870555, 25.751087221835885]
+  },
+  {
+    "nimi": "Hollywood Bowling & Billiards",
+    "sijainti": [62.243516003001275, 25.748572505979478]
+  },
+  {
+    "nimi": "Karaoke Pub Resina",
+    "sijainti": [62.24114490962728, 25.752452098556983]
+  },
+  {
+    "nimi": "Helmi",
+    "sijainti": [62.2438416048431, 25.74995200597965]
+  },
+  {
+    "nimi": "London",
+    "sijainti": [62.245166347130535, 25.75055655994302]
+  },
+  {
+    "nimi": "Sohwi",
+    "sijainti": [62.23826681407282, 25.73848429062967]
+  },
+  {
+    "nimi": "Vakiopaine",
+    "sijainti": [62.23934152489566, 25.740202052013558]
+  },
+  {
+    "nimi": "Yläkaupungin Ale Pub",
+    "sijainti": [62.23912748110928, 25.739379437171998]
+  },
+  {
+    "nimi": "Vihreä Haltiatar",
+    "sijainti": [62.24019985473224, 25.741722452014425]
+  },
+  {
+    "nimi": "Musta Magia",
+    "sijainti": [62.23742311643895, 25.75364486044184]
+  },
+  {
+    "nimi": "Cheers",
+    "sijainti": [62.240114710716, 25.72738132924778]
+  },
+  {
+    "nimi": "Green Egg",
+    "sijainti": [62.24239639470458, 25.745917090632986]
+  },
+  {
+    "nimi": "Amarillo",
+    "sijainti": [62.24506743302505, 25.750563952522175]
+  },
+  {
+    "nimi": "Sataman Viilu",
+    "sijainti": [62.23550466061416, 25.759317483207386]
+  },
+  {
+    "nimi": "Ravintola Alakulma",
+    "sijainti": [62.23758129990094, 25.72373275201243]
+  },
+  {
+    "nimi": "Bar Moe's",
+    "sijainti": [62.24295001429279, 25.75165489855816]
+  },
+  {
+    "nimi": "Proud Mary Pub",
+    "sijainti": [62.24416177760586, 25.74990881917633]
+  }
 ]
