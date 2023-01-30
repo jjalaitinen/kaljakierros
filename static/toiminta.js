@@ -114,6 +114,7 @@ function lisaa_kasittelijat() {
     if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
+    L.marker(satunnainen_baari["sijainti"]).addTo(map);
     let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
@@ -137,21 +138,6 @@ function lisaa_kasittelijat() {
   $("#nayta_kartta").click(function () {
     vaihda_aktiivinen_nappi("#nayta_kartta");
     nayta_sivu("#karttasivu");
-
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }).addTo(map);
-
-    var bounds = [
-      [62.239256, 25.735281],
-      [62.246522, 25.749637],
-      [62.243883, 25.75867],
-      [62.235876, 25.742826],
-    ];
-    map.setMaxBounds(bounds);
-    map.options.minZoom = 15;
   });
 
   $(".baarin_nimi").click(nayta_tiedot);
@@ -171,7 +157,7 @@ async function hae_kaikki_baarit() {
 
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
-    map = L.map("map").setView([62.2426, 25.7473], 18);
+    map = L.map("map").setView([62.2426, 25.7473], 16);
     $("#karttasivu").css({ display: "none" });
     $("#baari_info").css({ display: "none" });
     listaa_kaikki_baarit();
@@ -183,6 +169,12 @@ $(document).ready(function () {
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
+    L.control
+      .attribution({
+        position: "topright",
+      })
+      .addTo(map);
+
     var bounds = [
       [62.239172, 25.734671],
       [62.246546, 25.750505],
@@ -192,6 +184,6 @@ $(document).ready(function () {
 
     map.fitBounds(bounds);
     map.setMaxBounds(bounds);
-    map.options.minZoom = map.getZoom();
+    map.options.minZoom = 14;
   });
 });
