@@ -1,4 +1,32 @@
 var map;
+var markerGroup;
+
+function mapin_alustus() {
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  L.control
+    .attribution({
+      position: "topright",
+    })
+    .addTo(map);
+
+  var bounds = [
+    [62.239172, 25.734671],
+    [62.246546, 25.750505],
+    [62.243717, 25.759753],
+    [62.23542, 25.742759],
+  ];
+
+  markerGroup = L.layerGroup().addTo(map);
+
+  map.fitBounds(bounds);
+  map.setMaxBounds(bounds);
+  map.options.minZoom = 14;
+}
 
 // Annettua id:tä vastaava (alabarin) nappi aktivoidaan ja muut deaktivoidaan
 function vaihda_aktiivinen_nappi(nappi_id) {
@@ -114,7 +142,8 @@ function lisaa_kasittelijat() {
     if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
-    L.marker(satunnainen_baari["sijainti"]).addTo(map);
+    L.marker(satunnainen_baari["sijainti"]).addTo(markerGroup);
+    //L.marker(satunnainen_baari["sijainti"]).addTo(map);
     let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
@@ -123,6 +152,7 @@ function lisaa_kasittelijat() {
 
   $("#poista_baarit").click(function () {
     $("#baarikierroslista").empty();
+    markerGroup.clearLayers();
   });
 
   $("#nayta_baarikierros").click(function () {
@@ -158,32 +188,10 @@ async function hae_kaikki_baarit() {
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
     map = L.map("map").setView([62.2426, 25.7473], 16);
-    $("#karttasivu").css({ display: "none" });
-    $("#baari_info").css({ display: "none" });
+    nayta_sivu("#baarikierros");
+    piilota_muut_kuin_etusivu();
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
-
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution:
-        '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }).addTo(map);
-
-    L.control
-      .attribution({
-        position: "topright",
-      })
-      .addTo(map);
-
-    var bounds = [
-      [62.239172, 25.734671],
-      [62.246546, 25.750505],
-      [62.243717, 25.759753],
-      [62.23542, 25.742759],
-    ];
-
-    map.fitBounds(bounds);
-    map.setMaxBounds(bounds);
-    map.options.minZoom = 14;
+    mapin_alustus();
   });
 });
