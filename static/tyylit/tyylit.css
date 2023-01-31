@@ -93,30 +93,31 @@ body {
 }
 
 #alapalkki {
-  background-color: #ad8e70;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-
-  box-shadow: 0 0 13px 13px rgba(109, 109, 109, 0.25);
-
   position: fixed;
   z-index: 10000;
   bottom: 0;
   left: 0;
-  min-width: 80%;
-  width: 80%;
+  min-width: 100%;
+  background-color: #ad8e70;
+  box-shadow: 0 0 13px 13px rgba(109, 109, 109, 0.25);
 }
 
-#alapalkki button {
+#alapalkin_painikkeet {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+#alapalkin_painikkeet button {
   border: none;
   background-color: #ad8e70;
 }
 
-#alapalkki button svg {
+#alapalkin_painikkeet button svg {
   width: 2em;
 }
 

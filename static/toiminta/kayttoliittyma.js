@@ -1,6 +1,6 @@
 // Annettua id:tä vastaava (alabarin) nappi aktivoidaan ja muut deaktivoidaan
 function vaihda_aktiivinen_nappi(nappi_id) {
-  $("#alapalkki").children().removeClass("valittuna");
+  $("#alapalkin_painikkeet").children().removeClass("valittuna");
   $(nappi_id).addClass("valittuna");
   return;
 }
