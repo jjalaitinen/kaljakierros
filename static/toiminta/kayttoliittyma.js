@@ -123,20 +123,19 @@ function lisaa_kasittelijat(kartta) {
     kartta.poista_baarit();
   });
 
-  $("#nayta_baarikierros").on("click", function () {
-    vaihda_aktiivinen_nappi("#nayta_baarikierros");
-    nayta_sivu("#baarikierros");
-  });
+  // Alabarin painikkeiden id:t ja painikkeen jälkeen näytettävän sivun id
+  var alabar_painikkeet = [["#nayta_baarikierros","#baarikierros"],
+                           ["#nayta_kaikki_baarit","#baari_info"],
+                           ["#nayta_kartta","#karttasivu"],
+                           ["#nayta_info","#info_sivu"]]
 
-  $("#nayta_kaikki_baarit").on("click",function () {
-    vaihda_aktiivinen_nappi("#nayta_kaikki_baarit");
-    nayta_sivu("#baari_info");
-  });
+  alabar_painikkeet.forEach(painike_ja_sivu => {
+    $(painike_ja_sivu[0]).on("click", function () {
+      vaihda_aktiivinen_nappi(painike_ja_sivu[0]);
+      nayta_sivu(painike_ja_sivu[1]);
+    });
+  })
 
-  $("#nayta_kartta").on("click",function () {
-    vaihda_aktiivinen_nappi("#nayta_kartta");
-    nayta_sivu("#karttasivu");
-  });
 
   $(".baarin_nimi").on("click",nayta_tiedot);
 }
