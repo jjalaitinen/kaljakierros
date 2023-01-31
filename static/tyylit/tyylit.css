@@ -116,6 +116,10 @@ body {
   background-color: #ad8e70;
 }
 
+.alabar_button:hover {
+  cursor: pointer;
+}
+
 /* Alabarin valittuna oleva button */
 .valittuna svg {
   fill: rgb(174, 174, 174);
