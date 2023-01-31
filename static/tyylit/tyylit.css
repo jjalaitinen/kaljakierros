@@ -116,6 +116,10 @@ body {
   background-color: #ad8e70;
 }
 
+#alapalkki button svg {
+  width: 2em;
+}
+
 .alabar_button:hover {
   cursor: pointer;
 }
