@@ -1,32 +1,4 @@
-var map;
-var markerGroup;
-
-function mapin_alustus() {
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
-    attribution:
-      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(map);
-
-  L.control
-    .attribution({
-      position: "topright",
-    })
-    .addTo(map);
-
-  var bounds = [
-    [62.239172, 25.734671],
-    [62.246546, 25.750505],
-    [62.243717, 25.759753],
-    [62.23542, 25.742759],
-  ];
-
-  markerGroup = L.layerGroup().addTo(map);
-
-  map.fitBounds(bounds);
-  map.setMaxBounds(bounds);
-  map.options.minZoom = 14;
-}
+import * as kartta from "./kartta.js";
 
 // Annettua id:tä vastaava (alabarin) nappi aktivoidaan ja muut deaktivoidaan
 function vaihda_aktiivinen_nappi(nappi_id) {
@@ -38,7 +10,6 @@ function vaihda_aktiivinen_nappi(nappi_id) {
 // Funktio listaa klikatun spanin tiedot nimen alle
 function nayta_tiedot(e) {
   e.preventDefault();
-  //let id = e.target.parentNode.parentNode.id;
   let target = $(e.target);
   let lisatieto = target.parent().parent().children(".lisatieto").first();
   var oliJoPiilossa = lisatieto.css("display") == "none";
@@ -142,8 +113,7 @@ function lisaa_kasittelijat() {
     if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
-    L.marker(satunnainen_baari["sijainti"]).addTo(markerGroup);
-    //L.marker(satunnainen_baari["sijainti"]).addTo(map);
+    kartta.lisaa_baari(satunnainen_baari["sijainti"]);
     let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
@@ -152,7 +122,7 @@ function lisaa_kasittelijat() {
 
   $("#poista_baarit").click(function () {
     $("#baarikierroslista").empty();
-    markerGroup.clearLayers();
+    kartta.poista_baarit();
   });
 
   $("#nayta_baarikierros").click(function () {
@@ -187,10 +157,10 @@ async function hae_kaikki_baarit() {
 
 $(document).ready(function () {
   hae_kaikki_baarit().then(() => {
-    map = L.map("map").setView([62.2426, 25.7473], 16);
+    kartta.luo_kartta();
     nayta_sivu("#baarikierros");
     listaa_kaikki_baarit();
     lisaa_kasittelijat();
-    mapin_alustus();
+    kartta.kartan_alustus();
   });
 });
