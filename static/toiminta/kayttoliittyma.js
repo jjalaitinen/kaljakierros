@@ -95,6 +95,7 @@ function listaa_kaikki_baarit() {
     let baarilista_elementti = luo_baari_elementti(baari);
     baarilista_elementti.attr("id", baari["nimi"]);
     $("#kaikki_baarit").append(baarilista_elementti);
+    $("#kaikki_baarit").append($("<hr></hr>"));
   }
 }
 
