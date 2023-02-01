@@ -40,7 +40,10 @@
       }
     ],
     "osoite": "Kauppakatu 30",
-    "sijainti": [62.24356649616854, 25.74945542989057]
+    "sijainti": [
+      62.24356649616854,
+      25.74945542989057
+    ]
   },
   {
     "nimi": "Hemmingway's",
@@ -83,7 +86,10 @@
       }
     ],
     "osoite": "Kauppakatu 32",
-    "sijainti": [62.243973459233246, 25.750468289582358]
+    "sijainti": [
+      62.243973459233246,
+      25.750468289582358
+    ]
   },
   {
     "nimi": "Poppari",
@@ -126,7 +132,10 @@
       }
     ],
     "osoite": "Puistokatu 2–4 (Aren aukio, käynti Ilmarisenkadun puolelta)",
-    "sijainti": [62.24451610335448, 25.75123614694059]
+    "sijainti": [
+      62.24451610335448,
+      25.75123614694059
+    ]
   },
   {
     "nimi": "Lucky",
@@ -169,7 +178,10 @@
       }
     ],
     "osoite": "Gummeruksenkatu 7",
-    "sijainti": [62.23990308270991, 25.743575593976544]
+    "sijainti": [
+      62.23990308270991,
+      25.743575593976544
+    ]
   },
   {
     "nimi": "Redneck",
@@ -212,7 +224,10 @@
       }
     ],
     "osoite": "Asemakatu 7",
-    "sijainti": [62.24236947681031, 25.74776971399921]
+    "sijainti": [
+      62.24236947681031,
+      25.74776971399921
+    ]
   },
   {
     "nimi": "Escape",
@@ -255,7 +270,10 @@
       }
     ],
     "osoite": "Kauppakatu 32",
-    "sijainti": [62.24382200610727, 25.750001929578655]
+    "sijainti": [
+      62.24382200610727,
+      25.750001929578655
+    ]
   },
   {
     "nimi": "Café Europa",
@@ -298,7 +316,10 @@
       }
     ],
     "osoite": "Kauppalaispiha 1",
-    "sijainti": [62.24342292584559, 25.746566339214255]
+    "sijainti": [
+      62.24342292584559,
+      25.746566339214255
+    ]
   },
   {
     "nimi": "Revolution",
@@ -341,7 +362,10 @@
       }
     ],
     "osoite": "Kauppakatu 30",
-    "sijainti": [62.24356813591676, 25.749452700955057]
+    "sijainti": [
+      62.24356813591676,
+      25.749452700955057
+    ]
   },
   {
     "nimi": "Pataässä",
@@ -384,118 +408,233 @@
       }
     ],
     "osoite": "Väinönkatu 26",
-    "sijainti": [62.24410293535084, 25.74917397205966]
+    "sijainti": [
+      62.24410293535084,
+      25.74917397205966
+    ]
   },
   {
     "nimi": "Ravintola Mutka",
-    "sijainti": [62.24352165809615, 25.747456204441175]
+    "sijainti": [
+      62.24352165809615,
+      25.747456204441175
+    ],
+    "osoite": "Kauppalaispiha"
   },
   {
     "nimi": "Heidi's Bier Bar",
-    "sijainti": [62.244473047958465, 25.74761790427499]
+    "sijainti": [
+      62.244473047958465,
+      25.74761790427499
+    ],
+    "osoite": "Yliopistonkatu 36"
   },
   {
     "nimi": "Radio Cafe",
-    "sijainti": [62.2466666766674, 25.755483192090527]
+    "sijainti": [
+      62.2466666766674,
+      25.755483192090527
+    ],
+    "osoite": "Yrjönkatu 14"
   },
   {
     "nimi": "DeLorean",
-    "sijainti": [62.24363893092465, 25.74892757900044]
+    "sijainti": [
+      62.24363893092465,
+      25.74892757900044
+    ],
+    "osoite": "Kauppakatu 39 A"
   },
   {
     "nimi": "HIISI Taproom & Bottleshop",
-    "sijainti": [62.239068391114515, 25.754430107726602]
+    "sijainti": [
+      62.239068391114515,
+      25.754430107726602
+    ],
+    "osoite": "Lutakonaukio 3"
   },
   {
     "nimi": "Explosive Bar",
-    "sijainti": [62.24462179026194, 25.750001753900655]
+    "sijainti": [
+      62.24462179026194,
+      25.750001753900655
+    ],
+    "osoite": "Puistokatu 1"
   },
   {
     "nimi": "Ruthin Ravintola",
-    "sijainti": [62.23785862052266, 25.737426705341154]
+    "sijainti": [
+      62.23785862052266,
+      25.737426705341154
+    ],
+    "osoite": "Seminaarinkatu 19"
   },
   {
     "nimi": "Musta Kynnys",
-    "sijainti": [62.24050481026771, 25.752155638387347]
+    "sijainti": [
+      62.24050481026771,
+      25.752155638387347
+    ],
+    "osoite": "Hannikaisenkatu 16"
   },
   {
     "nimi": "Teerenpeli",
-    "sijainti": [62.243897036517815, 25.75012250864083]
+    "sijainti": [
+      62.243897036517815,
+      25.75012250864083
+    ],
+    "osoite": "Kauppakatu 32"
   },
   {
     "nimi": "Matsi Bar",
-    "sijainti": [62.243267827591744, 25.745646211353602]
+    "sijainti": [
+      62.243267827591744,
+      25.745646211353602
+    ],
+    "osoite": "Asemakatu 11"
   },
   {
     "nimi": "Harry's",
-    "sijainti": [62.24392117443018, 25.749614568421446]
+    "sijainti": [
+      62.24392117443018,
+      25.749614568421446
+    ],
+    "osoite": "Kauppakatu 41"
   },
   {
     "nimi": "Jalo Kitchen & Lounge",
-    "sijainti": [62.24094290914342, 25.751514969623802]
+    "sijainti": [
+      62.24094290914342,
+      25.751514969623802
+    ],
+    "osoite": "Asemakatu 2"
   },
   {
-    "nimi": "Hollywood Bowling & Billiards",
-    "sijainti": [62.243334901561475, 25.74848984650081]
+    "nimi": "Hollywood Bowling",
+    "sijainti": [
+      62.243334901561475,
+      25.74848984650081
+    ],
+    "osoite": "Kauppakatu 37"
   },
   {
     "nimi": "Karaoke Pub Resina",
-    "sijainti": [62.24080753604286, 25.75261957360414]
+    "sijainti": [
+      62.24080753604286,
+      25.75261957360414
+    ],
+    "osoite": "Hannikaisenkatu 16"
   },
   {
     "nimi": "Karaoke Bar Helmi",
-    "sijainti": [62.24352043223022, 25.74986826094015]
+    "sijainti": [
+      62.24352043223022,
+      25.74986826094015
+    ],
+    "osoite": "Väinönkatu 7"
   },
   {
     "nimi": "London",
-    "sijainti": [62.244783297415964, 25.75060004991463]
+    "sijainti": [
+      62.244783297415964,
+      25.75060004991463
+    ],
+    "osoite": "Puistokatu 2"
   },
   {
     "nimi": "Sohwi",
-    "sijainti": [62.237857334366545, 25.738439423643392]
+    "sijainti": [
+      62.237857334366545,
+      25.738439423643392
+    ],
+    "osoite": "Vaasankatu 21"
   },
   {
     "nimi": "Vakiopaine",
-    "sijainti": [62.23879662533358, 25.73998543117614]
+    "sijainti": [
+      62.23879662533358,
+      25.73998543117614
+    ],
+    "osoite": "Kauppakatu 6"
   },
   {
     "nimi": "Yläkaupungin Ale Pub",
-    "sijainti": [62.238667614607984, 25.739767042419412]
+    "sijainti": [
+      62.238667614607984,
+      25.739767042419412
+    ],
+    "osoite": "Kauppakatu 6"
   },
   {
     "nimi": "Vihreä Haltiatar",
-    "sijainti": [62.23990037990931, 25.741507263580203]
+    "sijainti": [
+      62.23990037990931,
+      25.741507263580203
+    ],
+    "osoite": "Kauppakatu 13"
   },
   {
     "nimi": "M/S Musta Magia",
-    "sijainti": [62.23698192645779, 25.754246779915327]
+    "sijainti": [
+      62.23698192645779,
+      25.754246779915327
+    ],
+    "osoite": "Satamakatu"
   },
   {
     "nimi": "Cheers",
-    "sijainti": [62.23973490430222, 25.727508544854185]
+    "sijainti": [
+      62.23973490430222,
+      25.727508544854185
+    ],
+    "osoite": "Voionmaankatu 11"
   },
   {
     "nimi": "Green Egg",
-    "sijainti": [62.24203861502227, 25.74587423257592]
+    "sijainti": [
+      62.24203861502227,
+      25.74587423257592
+    ],
+    "osoite": "Kauppakatu 27"
   },
   {
     "nimi": "Amarillo",
-    "sijainti": [62.244528790520974, 25.75090624470963]
+    "sijainti": [
+      62.244528790520974,
+      25.75090624470963
+    ],
+    "osoite": "Puistokatu 2"
   },
   {
     "nimi": "Sataman Viilu",
-    "sijainti": [62.23510574270907, 25.759572337958573]
+    "sijainti": [
+      62.23510574270907,
+      25.759572337958573
+    ],
+    "osoite": "Satamakatu 10"
   },
   {
     "nimi": "Ravintola Alakulma",
-    "sijainti": [62.23732134332087, 25.723524893872014]
+    "sijainti": [
+      62.23732134332087,
+      25.723524893872014
+    ],
+    "osoite": "Rautpohjankatu 10"
   },
   {
     "nimi": "Bar Moe's",
-    "sijainti": [62.24262962792911, 25.751875371797276]
+    "sijainti": [
+      62.24262962792911,
+      25.751875371797276
+    ],
+    "osoite": "Väinönkatu 3"
   },
   {
     "nimi": "Proud Mary Pub",
-    "sijainti": [62.244060888414076, 25.74991466476393]
+    "sijainti": [
+      62.244060888414076,
+      25.74991466476393
+    ],
+    "osoite": "Kauppakatu 41"
   }
 ]
