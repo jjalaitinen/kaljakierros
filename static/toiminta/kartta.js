@@ -1,8 +1,8 @@
 var map;
 var markerGroup;
 
-function lisaa_baari(sijainti) {
-  L.marker(sijainti).addTo(markerGroup);
+function lisaa_baari(sijainti, nimi) {
+  L.marker(sijainti).addTo(markerGroup).bindPopup(nimi);
 }
 
 function poista_baarit() {
@@ -39,4 +39,4 @@ function kartan_alustus() {
   map.options.minZoom = 14;
 }
 
-export { kartan_alustus, luo_kartta, poista_baarit, lisaa_baari};
+export { kartan_alustus, luo_kartta, poista_baarit, lisaa_baari };

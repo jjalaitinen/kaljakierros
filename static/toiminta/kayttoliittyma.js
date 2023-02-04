@@ -103,7 +103,19 @@ function nayta_sivu(sivun_id) {
   $("#baarikierros").css({ display: "none" });
   $("#baari_info").css({ display: "none" });
   $("#karttasivu").css({ display: "none" });
+  $("#info_sivu").css({ display: "none" });
   $(sivun_id).css({ display: "" });
+}
+
+// Värjätään baarikierrokselle generoitu baari erottuvaksi "Kaikki baarit" -listaan
+function varjaa(baari) {
+  let baaritlista = $("#kaikki_baarit").children();
+
+  for (let i = 0; i < baaritlista.length; i++) {
+    if (baari.nimi == baaritlista[i].id) {
+      baaritlista[i].firstChild.firstChild.style.color = "red";
+    }
+  }
 }
 
 function lisaa_kasittelijat(kartta) {
@@ -112,7 +124,10 @@ function lisaa_kasittelijat(kartta) {
     if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
-    kartta.lisaa_baari(satunnainen_baari["sijainti"]);
+    kartta.lisaa_baari(
+      satunnainen_baari["sijainti"],
+      satunnainen_baari["nimi"]
+    );
     //let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
     let baarilista_elementti = $("<li></li>");
     if ($("#baarikierroslista li").length > 0) {
@@ -120,6 +135,7 @@ function lisaa_kasittelijat(kartta) {
     }
 
     baarilista_elementti.append($("<div></div>").text(satunnainen_baari.nimi));
+    varjaa(satunnainen_baari);
 
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
