@@ -113,7 +113,14 @@ function lisaa_kasittelijat(kartta) {
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
     kartta.lisaa_baari(satunnainen_baari["sijainti"]);
-    let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
+    //let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
+    let baarilista_elementti = $("<li></li>");
+    if ($("#baarikierroslista li").length > 0) {
+      baarilista_elementti.append($("<div>&bull;</div>"));
+    }
+
+    baarilista_elementti.append($("<div></div>").text(satunnainen_baari.nimi));
+
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
     $("#baarikierroslista").append(baarilista_elementti);

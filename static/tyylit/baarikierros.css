@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "roboto_monobold";
+  src: url("./fontit/robotomono-bold-webfont.woff2") format("woff2"),
+    url("./fontit/robotomono-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 #baarikierros {
   margin: 0;
   min-height: 100vh;
@@ -12,6 +19,7 @@
 }
 
 #baarikierroslista {
+  font-family: "roboto_monobold";
   margin-bottom: 4em;
 }
 
@@ -32,13 +40,7 @@ Oikeaan reunaan alas päällekkäin.
 
 /*baarikierrosnappien kokoa ja väriä*/
 #baarikierrosnapit button {
-  /* background-color: #243763; */
   background-color: rgb(255, 235, 183, 0.7);
-
-  /* background: transparent;
-   */
-  /*  border: none !important;
- */
   border-radius: 25%;
   min-width: 75px;
   max-width: 75px;
