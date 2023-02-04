@@ -131,12 +131,17 @@ body {
 #alapalkin_painikkeet button img {
   width: 2em;
   height: 2em;
+
+  -webkit-filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(33deg)
+    brightness(103%) contrast(100%);
   filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(33deg) brightness(103%)
     contrast(100%);
 }
 
 /* Alabarin valittuna oleva button */
 .valittuna img {
+  -webkit-filter: invert(0%) sepia(2%) saturate(21%) hue-rotate(58deg)
+    brightness(98%) contrast(100%) !important;
   filter: invert(0%) sepia(2%) saturate(21%) hue-rotate(58deg) brightness(98%)
     contrast(100%) !important;
 }
