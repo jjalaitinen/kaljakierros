@@ -65,7 +65,7 @@ function luo_baari_elementti(baari) {
 
   div_nimi.append(img_nuoli);
 
-  let div_kuvaus = $("<div></div>");
+  let div_kuvaus = $("<div></div>").addClass("kuvaus");
   let span_kuvaus = $("<span></span>").text(kuvaus);
   let kuvaus_elementti = div_kuvaus.append(span_kuvaus);
 
@@ -78,7 +78,7 @@ function luo_baari_elementti(baari) {
   }
   let aukiolo_elementti = div_aukiolo.append(aukiolo_elem);
 
-  let div_osoite = $("<div></div>");
+  let div_osoite = $("<div></div>").addClass("osoite");
   let span_osoite = $("<span></span>").text(osoite);
   let osoite_elementti = div_osoite.append(span_osoite);
 
