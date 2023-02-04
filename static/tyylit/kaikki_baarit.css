@@ -13,7 +13,7 @@
 /* lista-elementti */
 #kaikki_baarit {
   overflow-y: scroll;
-  text-align: left;
+  text-align: center;
 }
 /* #kaikki_baarit -listan li-elementtien sisässä oleva div, joka on oletuksena piilossa
 ja joka avaamalla tulee näkyviin baarin tiedot */
