@@ -61,7 +61,13 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: "roboto_monobold";
+  src: url("./fontit/robotomono-bold-webfont.woff2") format("woff2"),
+    url("./fontit/robotomono-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Poistetaan kaikista listoista marker ja margin */
 ul {
   list-style-type: none;

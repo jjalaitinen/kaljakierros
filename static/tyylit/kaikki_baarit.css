@@ -1,3 +1,5 @@
+/* Kaikkien baarien listasta muodostuvan näkymän css-tiedosto */
+/* Näkymän pohjimmainen div */
 #baari_info {
   height: 100%;
   max-width: 850px;
@@ -7,15 +9,53 @@
   display: flex;
   flex-direction: column;
 }
-
-.baarin_nimi:hover {
-  cursor: pointer;
-  color: grey;
-}
-
+/* lista-elementti */
 #kaikki_baarit {
   overflow-y: scroll;
   text-align: left;
+}
+/* #kaikki_baarit -listan li-elementtien sisässä oleva div, joka on oletuksena piilossa
+ja joka avaamalla tulee näkyviin baarin tiedot */
+.lisatieto {
+  margin-bottom: 2em;
+}
+
+.lisatieto div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+/* Baarin tiedot */
+.osoite,
+.aukioloalkio,
+.kuvaus {
+  width: 80%;
+  margin: auto;
+  max-width: 500px;
+}
+
+.osoite {
+  font-family: "roboto_monobold";
+}
+/* aukiolojen tyylittelyt */
+.aukiololista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aukioloalkio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aukioloalkio span {
+  text-align: left;
+}
+
+/* ominaisuuksia ---------------------------------------------------  */
+.baarin_nimi:hover {
+  cursor: pointer;
+  color: grey;
 }
 
 .nimi_ja_nuoli {
@@ -26,31 +66,4 @@
 
 .kaannettu_nuoli {
   transform: rotate(90deg);
-}
-
-.lisatieto {
-  border: 3px dotted rgba(0, 0, 0, 0.3);
-  margin-bottom: 2em;
-}
-
-.lisatieto div {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
-.aukiololista {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.aukioloalkio {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 500px;
-}
-
-.aukioloalkio span {
-  text-align: left;
 }
