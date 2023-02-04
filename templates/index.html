@@ -28,6 +28,11 @@
     />
     <link
       rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='./tyylit/info_sivu.css') }}"
+    />
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
       integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
       crossorigin=""
@@ -85,42 +90,52 @@
       <div id="map"></div>
     </div>
     <div id="info_sivu">
-      <div>
-        <h1 class="otsikko">Miksi?</h1>
-        <p>
-          Kaljakierros on mielestämme merkittävä kulttuuriteko Jyväskylän
-          keskustan baari- ja ravintolakulttuurin elvyttämiseksi. Keskustan
-          alueella on paljon juottoloita, joista useat saattavat jäädä
-          sivukujien hämärään. Sovelluksen tarkoituksena on tuoda yhtäläiset
-          mahdollisuudet jokaiselle baarille saada kävijöitä, kuten myös
-          asiakkaille uusia kokemuksia.
-        </p>
-      </div>
-      <div>
-        <h1>Tiimi</h1>
-        <p>
-          Sovelluksen takana on kaksi Jyväskylän yliopiston tietotekniikan
-          opiskelijaa, Joona ja Tuukka. Meille molemmille olut ja koodaaminen on
-          lähellä sydäntä, joten
-        </p>
-        <p>Joona, Tuukka, Taneli ja Konsta</p>
-        <p>Visual mastermind: Miro</p>
-      </div>
-      <div>
-        <h1>Anna palautetta</h1>
-        <p>
-          Olemme vielä beta-vaiheessa, joten palautetta ja kehitysehdotuksia voi
-          lähettää osoitteeseen:
-        </p>
-        <p>kaljakierros@gmail.com</p>
-      </div>
-      <div>
-        <h1>Koodista</h1>
-        <p>
-          Sovelluksen pohjakoodi on täysin luettavissa
-          <a href="https://github.com/jjalaitinen/kaljakierros">Githubissa</a>.
-          Käy kurkkaamassa, jos kiinnostaa!
-        </p>
+      <div id="info_sisalto">
+        <div>
+          <h1 class="otsikko">Miksi?</h1>
+          <p>
+            Kaljakierros on mielestämme merkittävä kulttuuriteko Jyväskylän
+            keskustan baari- ja ravintolakulttuurin elvyttämiseksi. Keskustan
+            alueella on paljon juottoloita, joista useat saattavat jäädä
+            sivukujien hämärään. Sovelluksen tarkoituksena on tuoda yhtäläiset
+            mahdollisuudet jokaiselle baarille saada kävijöitä, kuten myös
+            asiakkaille uusia kokemuksia.
+          </p>
+        </div>
+        <div>
+          <h1>Tiimi</h1>
+          <p>
+            Sovelluksen takana on kaksi Jyväskylän yliopiston tietotekniikan
+            opiskelijaa, Joona ja Tuukka. Meille molemmille olut ja koodaaminen
+            on lähellä sydäntä, joten
+          </p>
+          <p>Joona, Tuukka, Taneli ja Konsta</p>
+          <p>Visual mastermind: Miro</p>
+        </div>
+        <div>
+          <h1>Anna palautetta</h1>
+          <p>
+            Olemme vielä beta-vaiheessa, joten palautetta ja kehitysehdotuksia
+            voi lähettää osoitteeseen:
+          </p>
+          <p>kaljakierros@gmail.com</p>
+        </div>
+        <div>
+          <h1>Koodista</h1>
+          <p>
+            Sovelluksen pohjakoodi on täysin luettavissa
+            <a href="https://github.com/jjalaitinen/kaljakierros">Githubissa</a
+            >. Käy kurkkaamassa, jos kiinnostaa!
+          </p>
+        </div>
+        <div>
+          <h1>Huumoria</h1>
+          <p>tänne listataan vuoden meemit</p>
+        </div>
+        <div>
+          <h1>Playlist</h1>
+          <p>VAAAiKO?!</p>
+        </div>
       </div>
     </div>
     <div id="alapalkki">
