@@ -21,12 +21,6 @@ function kartan_alustus() {
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  L.control
-    .attribution({
-      position: "topright",
-    })
-    .addTo(map);
-
   var bounds = [
     [62.239172, 25.734671],
     [62.246546, 25.750505],
