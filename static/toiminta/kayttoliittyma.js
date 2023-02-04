@@ -108,7 +108,7 @@ function nayta_sivu(sivun_id) {
 
 function lisaa_kasittelijat(kartta) {
   var kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
-  $("#lisaa_baari").on("click",function () {
+  $("#lisaa_baari").on("click", function () {
     if (kaikki_baarit.length == 0) return;
     let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
     let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
@@ -119,26 +119,27 @@ function lisaa_kasittelijat(kartta) {
     $("#baarikierroslista").append(baarilista_elementti);
   });
 
-  $("#poista_baarit").on("click",function () {
+  $("#poista_baarit").on("click", function () {
     $("#baarikierroslista").empty();
     kartta.poista_baarit();
   });
 
   // Alabarin painikkeiden id:t ja painikkeen jälkeen näytettävän sivun id
-  var alabar_painikkeet = [["#nayta_baarikierros","#baarikierros"],
-                           ["#nayta_kaikki_baarit","#baari_info"],
-                           ["#nayta_kartta","#karttasivu"],
-                           ["#nayta_info","#info_sivu"]]
+  var alabar_painikkeet = [
+    ["#nayta_baarikierros", "#baarikierros"],
+    ["#nayta_kaikki_baarit", "#baari_info"],
+    ["#nayta_kartta", "#karttasivu"],
+    ["#nayta_info", "#info_sivu"],
+  ];
 
-  alabar_painikkeet.forEach(painike_ja_sivu => {
+  alabar_painikkeet.forEach((painike_ja_sivu) => {
     $(painike_ja_sivu[0]).on("click", function () {
       vaihda_aktiivinen_nappi(painike_ja_sivu[0]);
       nayta_sivu(painike_ja_sivu[1]);
     });
-  })
+  });
 
-
-  $(".baarin_nimi").on("click",nayta_tiedot);
+  $(".baarin_nimi").on("click", nayta_tiedot);
 }
 
-export {nayta_sivu,listaa_kaikki_baarit,lisaa_kasittelijat}
+export { nayta_sivu, listaa_kaikki_baarit, lisaa_kasittelijat };
