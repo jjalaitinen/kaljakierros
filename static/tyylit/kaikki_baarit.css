@@ -15,6 +15,17 @@
 
 #kaikki_baarit {
   overflow-y: scroll;
+  text-align: left;
+}
+
+.nimi_ja_nuoli {
+  margin: 0 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kaannettu_nuoli {
+  transform: rotate(90deg);
 }
 
 .lisatieto {

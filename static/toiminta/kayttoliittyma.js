@@ -11,12 +11,16 @@ function nayta_tiedot(e) {
   let target = $(e.target);
   let lisatieto = target.parent().parent().children(".lisatieto").first();
   var oliJoPiilossa = lisatieto.css("display") == "none";
+  $(".nuoli").removeClass("kaannettu_nuoli");
+
   $(".lisatieto").css({ display: "none" });
   $("#kaikki_baarit").children().css({ filter: "blur(1px) brightness(80%)" });
   if (oliJoPiilossa) {
+    target.parent().find(".nuoli").addClass("kaannettu_nuoli");
     lisatieto.parent().css({ filter: "" });
     lisatieto.css({ display: "" });
   } else {
+    target.parent().find(".nuoli").removeClass("kaannettu_nuoli");
     $(".lisatieto").parent().css({ filter: "" });
   }
 }
@@ -49,9 +53,17 @@ function luo_baari_elementti(baari) {
   let li = $("<li></li>");
 
   let div_nimi = $("<div></div>");
+  div_nimi.addClass("nimi_ja_nuoli");
   let span_nimi = $("<span></span>").text(nimi);
   span_nimi.addClass("baarin_nimi");
   let nimi_elementti = div_nimi.append(span_nimi);
+
+  let img_nuoli = $("<img></img>");
+  img_nuoli.attr("alt", "nuoli_oikealle");
+  img_nuoli.attr("src", "./static/kuvat/nuoli.svg");
+  img_nuoli.addClass("nuoli");
+
+  div_nimi.append(img_nuoli);
 
   let div_kuvaus = $("<div></div>");
   let span_kuvaus = $("<span></span>").text(kuvaus);
@@ -103,6 +115,7 @@ function nayta_sivu(sivun_id) {
   $("#baarikierros").css({ display: "none" });
   $("#baari_info").css({ display: "none" });
   $("#karttasivu").css({ display: "none" });
+  $("#info_sivu").css({ display: "none" });
   $(sivun_id).css({ display: "" });
 }
 
