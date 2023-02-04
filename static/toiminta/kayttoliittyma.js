@@ -120,13 +120,24 @@ function nayta_sivu(sivun_id) {
 }
 
 // Värjätään baarikierrokselle generoitu baari erottuvaksi "Kaikki baarit" -listaan
-function varjaa(baari) {
+function varjaa(baari, vari) {
   let baaritlista = $("#kaikki_baarit").children();
 
   for (let i = 0; i < baaritlista.length; i++) {
     if (baari.nimi == baaritlista[i].id) {
-      baaritlista[i].firstChild.firstChild.style.color = "red";
+      baaritlista[i].firstChild.firstChild.style.color = vari;
     }
+  }
+}
+
+function varjaa_valittu(baari) {
+  varjaa(baari, "red");
+}
+
+function poista_valitut() {
+  let baaritlista = $("#kaikki_baarit").children();
+  for (let i = 0; i < baaritlista.length; i++) {
+    baaritlista[i].firstChild.firstChild.style.color = "";
   }
 }
 
@@ -147,7 +158,7 @@ function lisaa_kasittelijat(kartta) {
     }
 
     baarilista_elementti.append($("<div></div>").text(satunnainen_baari.nimi));
-    varjaa(satunnainen_baari);
+    varjaa_valittu(satunnainen_baari);
 
     // Poistetaan
     kaikki_baarit.splice(satunnainen_indeksi, 1);
@@ -156,6 +167,7 @@ function lisaa_kasittelijat(kartta) {
 
   $("#poista_baarit").on("click", function () {
     $("#baarikierroslista").empty();
+    poista_valitut();
     kartta.poista_baarit();
   });
 
