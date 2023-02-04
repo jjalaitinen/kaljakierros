@@ -1,8 +1,8 @@
 /* Kaikkien baarien listasta muodostuvan näkymän css-tiedosto */
 /* Näkymän pohjimmainen div */
 #baari_info {
-  max-height: 90vh;
-  height: 90vh;
+  max-height: 90%;
+  height: 90%;
   max-width: 850px;
   margin: 0;
   margin: auto;

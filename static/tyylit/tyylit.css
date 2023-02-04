@@ -111,8 +111,8 @@ button:hover {
 
 /* Alapalkin kaaos--------------------------------------------------------------------------------- */
 #alapalkki {
-  height: 10vh;
-  min-width: 100vw;
+  height: 10%;
+  min-width: 100%;
   background-color: #ad8e70;
   box-shadow: 0 0 13px 13px rgba(109, 109, 109, 0.25);
   display: flex;
