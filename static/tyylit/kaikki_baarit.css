@@ -1,8 +1,11 @@
 #baari_info {
+  height: 100%;
   max-width: 850px;
+  margin: 0;
   margin: auto;
-  margin-top: 2em;
   background-color: #ffebb7;
+  display: flex;
+  flex-direction: column;
 }
 
 .baarin_nimi:hover {
@@ -11,7 +14,7 @@
 }
 
 #kaikki_baarit {
-  margin-bottom: 6em !important;
+  overflow-y: scroll;
 }
 
 .lisatieto {
