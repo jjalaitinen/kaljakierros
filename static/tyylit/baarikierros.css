@@ -49,16 +49,14 @@ Oikeaan reunaan alas päällekkäin.
   padding: 0;
 }
 
-#poista_baarit svg {
-  width: 2em;
-  height: 2em;
-  fill: #ff6e31;
+#poista_baarit img {
+  filter: invert(47%) sepia(86%) saturate(1375%) hue-rotate(339deg)
+    brightness(103%) contrast(101%);
 }
 
-#lisaa_baari svg {
-  fill: #243763;
-  width: 3em;
-  height: 3em;
+#lisaa_baari img {
+  filter: invert(16%) sepia(78%) saturate(562%) hue-rotate(185deg)
+    brightness(98%) contrast(92%);
 }
 
 /*baarikierrosnappien ikonit*/
