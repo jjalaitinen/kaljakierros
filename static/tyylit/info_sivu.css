@@ -13,7 +13,7 @@
 }
 
 #info_sisalto {
-  padding-bottom: 10em;
+  padding-bottom: 10%;
   overflow-y: scroll;
   flex-grow: 10;
 }

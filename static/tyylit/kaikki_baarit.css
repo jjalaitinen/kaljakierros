@@ -12,6 +12,7 @@
 }
 /* lista-elementti */
 #kaikki_baarit {
+  padding-bottom: 10%;
   overflow-y: scroll;
   text-align: center;
 }

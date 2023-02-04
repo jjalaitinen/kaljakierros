@@ -23,6 +23,11 @@
   font-family: "roboto_monobold";
   overflow-y: scroll;
 }
+
+#baarikierroslista li:last-child {
+  margin-bottom: 10%;
+}
+
 /* Baarinlisäämisnapin ja listannollausnapin divi
 Oikeaan reunaan alas päällekkäin.
 */
