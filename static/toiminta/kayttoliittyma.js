@@ -167,6 +167,7 @@ function lisaa_kasittelijat(kartta) {
 
   $("#poista_baarit").on("click", function () {
     $("#baarikierroslista").empty();
+    kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
     poista_valitut();
     kartta.poista_baarit();
   });
