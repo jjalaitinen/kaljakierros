@@ -9,7 +9,10 @@ function vaihda_aktiivinen_nappi(nappi_id) {
 function nayta_tiedot(e) {
   e.preventDefault();
   let target = $(e.target);
-  let lisatieto = target.parent().parent().children(".lisatieto").first();
+  let lisatieto = target.parent().children(".lisatieto").first();
+  if (e.target !== this) {
+    lisatieto = target.parent().parent().children(".lisatieto").first();
+  }
   var oliJoPiilossa = lisatieto.css("display") == "none";
   $(".nuoli").removeClass("kaannettu_nuoli");
 
@@ -187,7 +190,8 @@ function lisaa_kasittelijat(kartta) {
     });
   });
 
-  $(".baarin_nimi").on("click", nayta_tiedot);
+  $(".nimi_ja_nuoli").on("click", nayta_tiedot);
+  /* $(".baarin_nimi").on("click", nayta_tiedot); */
 }
 
 export { nayta_sivu, listaa_kaikki_baarit, lisaa_kasittelijat };

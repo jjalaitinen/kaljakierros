@@ -55,7 +55,7 @@ ja joka avaamalla tulee näkyviin baarin tiedot */
 }
 
 /* ominaisuuksia ---------------------------------------------------  */
-.baarin_nimi:hover {
+.nimi_ja_nuoli:hover {
   cursor: pointer;
   color: grey;
 }
