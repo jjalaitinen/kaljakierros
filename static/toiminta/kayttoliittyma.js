@@ -196,13 +196,13 @@ function lisaa_kasittelijat(kartta) {
   alabar_painikkeet.forEach((painike_ja_sivu) => {
     $(painike_ja_sivu[0]).on("click", function () {
       if (painike_ja_sivu[1] === "#baari_info") piilota_lisatiedot();
+      if (painike_ja_sivu[1] === "#karttasivu") kartta.tarkista_koko();
       vaihda_aktiivinen_nappi(painike_ja_sivu[0]);
       nayta_sivu(painike_ja_sivu[1]);
     });
   });
 
   $(".nimi_ja_nuoli").on("click", nayta_tiedot);
-  /* $(".baarin_nimi").on("click", nayta_tiedot); */
 }
 
 export { nayta_sivu, listaa_kaikki_baarit, lisaa_kasittelijat };

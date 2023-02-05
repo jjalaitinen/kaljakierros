@@ -33,4 +33,16 @@ function kartan_alustus() {
   map.options.minZoom = 14;
 }
 
-export { kartan_alustus, luo_kartta, poista_baarit, lisaa_baari };
+function tarkista_koko() {
+  setTimeout(function () {
+    map.invalidateSize();
+  }, 10);
+}
+
+export {
+  kartan_alustus,
+  luo_kartta,
+  poista_baarit,
+  lisaa_baari,
+  tarkista_koko,
+};

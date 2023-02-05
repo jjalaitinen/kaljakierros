@@ -9,6 +9,5 @@ $(function () {
     kayttoliittyma.listaa_kaikki_baarit();
     kayttoliittyma.lisaa_kasittelijat(kartta);
     kartta.kartan_alustus();
-    $(".lds-dual-ring").remove();
   });
 });
