@@ -9,23 +9,33 @@ function vaihda_aktiivinen_nappi(nappi_id) {
 function nayta_tiedot(e) {
   e.preventDefault();
   let target = $(e.target);
-  let lisatieto = target.parent().children(".lisatieto").first();
   if (e.target !== this) {
-    lisatieto = target.parent().parent().children(".lisatieto").first();
+    target = target.parent();
   }
-  var oliJoPiilossa = lisatieto.css("display") == "none";
-  $(".nuoli").removeClass("kaannettu_nuoli");
+  let lisatieto = target.parent().children(".lisatieto").first();
 
-  $(".lisatieto").css({ display: "none" });
-  $("#kaikki_baarit").children().css({ filter: "blur(1px) brightness(80%)" });
-  if (oliJoPiilossa) {
-    target.parent().find(".nuoli").addClass("kaannettu_nuoli");
+  let onAuki = false;
+  $(".lisatieto").each(function (index) {
+    if ($(this).css("display") === "block") {
+      onAuki = true;
+    }
+  });
+
+  piilota_lisatiedot();
+
+  if (!onAuki) {
+    target.find(".nuoli").addClass("kaannettu_nuoli");
+    $("#kaikki_baarit").children().css({ filter: "blur(1px) brightness(80%)" });
     lisatieto.parent().css({ filter: "" });
     lisatieto.css({ display: "" });
-  } else {
-    target.parent().find(".nuoli").removeClass("kaannettu_nuoli");
-    $(".lisatieto").parent().css({ filter: "" });
   }
+}
+
+/* Laitetaan piiloon kaikkien baarien lisatiedot */
+function piilota_lisatiedot() {
+  $(".lisatieto").css({ display: "none" });
+  $(".nuoli").removeClass("kaannettu_nuoli");
+  $(".lisatieto").parent().css({ filter: "" });
 }
 
 function luo_aukiolot(aukiolo_obj) {
@@ -185,6 +195,7 @@ function lisaa_kasittelijat(kartta) {
 
   alabar_painikkeet.forEach((painike_ja_sivu) => {
     $(painike_ja_sivu[0]).on("click", function () {
+      if (painike_ja_sivu[1] === "#baari_info") piilota_lisatiedot();
       vaihda_aktiivinen_nappi(painike_ja_sivu[0]);
       nayta_sivu(painike_ja_sivu[1]);
     });
