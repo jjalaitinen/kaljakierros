@@ -55,9 +55,12 @@ ja joka avaamalla tulee näkyviin baarin tiedot */
 }
 
 /* ominaisuuksia ---------------------------------------------------  */
-.nimi_ja_nuoli:hover {
-  cursor: pointer;
-  color: grey;
+
+@media (hover: hover) {
+  .nimi_ja_nuoli:hover {
+    cursor: pointer;
+    color: grey;
+  }
 }
 
 .nimi_ja_nuoli {
