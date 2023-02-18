@@ -2,7 +2,8 @@ var map;
 var markerGroup;
 
 function lisaa_baari(sijainti, nimi) {
-  L.marker(sijainti).addTo(markerGroup).bindPopup(nimi);
+  map.closePopup();
+  L.marker(sijainti).addTo(markerGroup).bindPopup(nimi).openPopup();
 }
 
 function poista_baarit() {
