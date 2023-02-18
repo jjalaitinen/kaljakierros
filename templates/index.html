@@ -7,6 +7,11 @@
       charset="UTF-8"
     />
     <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static',filename='./kuvat/favicon.svg') }}"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('static',filename='./tyylit/tyylit.css') }}"
@@ -41,10 +46,10 @@
     <div id="karttasivu">
       <div id="map"></div>
       <div id="baarikierrosnapit">
-        <button id="poista_baarit">
+        <button id="kumoa_baari">
           <img
-            alt="roskakori"
-            src="{{ url_for('static', filename='./kuvat/roskakori.svg') }}"
+            alt="kumoa"
+            src="{{ url_for('static', filename='./kuvat/kumoa.svg') }}"
           />
         </button>
         <button id="lisaa_baari">

@@ -46,7 +46,7 @@ Oikeaan reunaan alas päällekkäin.
   height: 70px;
 }
 
-#poista_baarit img {
+#kumoa_baari img {
   filter: invert(47%) sepia(86%) saturate(1375%) hue-rotate(339deg)
     brightness(103%) contrast(101%);
 }

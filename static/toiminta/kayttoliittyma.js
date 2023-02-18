@@ -147,42 +147,44 @@ function varjaa_valittu(baari) {
   varjaa(baari, "roboto_monobold");
 }
 
-function poista_valitut() {
+function poista_valinta(baari) {
   let baaritlista = $("#kaikki_baarit").children();
   for (let i = 0; i < baaritlista.length; i++) {
-    baaritlista[i].firstChild.firstChild.style.fontFamily = "";
+    if (baaritlista[i].id === baari["nimi"]) {
+      baaritlista[i].firstChild.firstChild.style.fontFamily = "";
+    }
   }
 }
 
 function lisaa_kasittelijat(kartta) {
-  var kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
+  var arvottavat_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
+  var arvotut_baarit = [];
   $("#lisaa_baari").on("click", function () {
-    if (kaikki_baarit.length == 0) return;
-    let satunnainen_indeksi = Math.floor(Math.random() * kaikki_baarit.length);
-    let satunnainen_baari = kaikki_baarit[satunnainen_indeksi];
+    if (arvottavat_baarit.length == 0) return;
+    let satunnainen_indeksi = Math.floor(
+      Math.random() * arvottavat_baarit.length
+    );
+    let satunnainen_baari = arvottavat_baarit[satunnainen_indeksi];
     kartta.lisaa_baari(
       satunnainen_baari["sijainti"],
       satunnainen_baari["nimi"]
     );
-    //let baarilista_elementti = luo_baari_elementti(satunnainen_baari);
-    let baarilista_elementti = $("<li></li>");
-    if ($("#baarikierroslista li").length > 0) {
-      baarilista_elementti.append($("<div>&bull;</div>"));
-    }
 
-    baarilista_elementti.append($("<div></div>").text(satunnainen_baari.nimi));
     varjaa_valittu(satunnainen_baari);
 
-    // Poistetaan
-    kaikki_baarit.splice(satunnainen_indeksi, 1);
-    $("#baarikierroslista").append(baarilista_elementti);
+    // Poistetaan arvottavista baareista
+    arvottavat_baarit.splice(satunnainen_indeksi, 1);
+
+    // Lisätään arvottuihin baareista
+    arvotut_baarit.push(satunnainen_baari);
   });
 
-  $("#poista_baarit").on("click", function () {
-    $("#baarikierroslista").empty();
-    kaikki_baarit = JSON.parse(localStorage.getItem("baaritiedot"));
-    poista_valitut();
-    kartta.poista_baarit();
+  $("#kumoa_baari").on("click", function () {
+    if (arvotut_baarit.length === 0) return;
+    let kumottava_baari = arvotut_baarit.pop();
+    arvottavat_baarit.push(kumottava_baari);
+    poista_valinta(kumottava_baari);
+    kartta.poista_baari(kumottava_baari["nimi"]);
   });
 
   // Alabarin painikkeiden id:t ja painikkeen jälkeen näytettävän sivun id
