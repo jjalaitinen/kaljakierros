@@ -19,7 +19,7 @@ Oikeaan reunaan alas päällekkäin.
   bottom: 0;
   right: 0;
   margin-right: 5%;
-  margin-bottom: 12vh;
+  margin-bottom: 13vh;
   min-height: 175px;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,10 @@ Oikeaan reunaan alas päällekkäin.
   min-height: 75px;
   max-height: 75px;
   padding: 0;
+}
+
+#baarikierrosnapit button img {
+  height: 70px;
 }
 
 #poista_baarit img {
