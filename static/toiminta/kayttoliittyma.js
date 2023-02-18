@@ -125,7 +125,6 @@ function listaa_kaikki_baarit() {
 }
 
 function nayta_sivu(sivun_id) {
-  $("#baarikierros").css({ display: "none" });
   $("#baari_info").css({ display: "none" });
   $("#karttasivu").css({ display: "none" });
   $("#info_sivu").css({ display: "none" });
@@ -187,11 +186,12 @@ function lisaa_kasittelijat(kartta) {
 
   // Alabarin painikkeiden id:t ja painikkeen jälkeen näytettävän sivun id
   var alabar_painikkeet = [
-    ["#nayta_baarikierros", "#baarikierros"],
     ["#nayta_kaikki_baarit", "#baari_info"],
     ["#nayta_kartta", "#karttasivu"],
     ["#nayta_info", "#info_sivu"],
   ];
+
+  vaihda_aktiivinen_nappi("#nayta_kaikki_baarit");
 
   alabar_painikkeet.forEach((painike_ja_sivu) => {
     $(painike_ja_sivu[0]).on("click", function () {

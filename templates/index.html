@@ -40,20 +40,6 @@
       </div>
       <div id="toiminnallisuus">
         <ul id="baarikierroslista"></ul>
-        <div id="baarikierrosnapit">
-          <button id="poista_baarit">
-            <img
-              alt="roskakori"
-              src="{{ url_for('static', filename='./kuvat/roskakori.svg') }}"
-            />
-          </button>
-          <button id="lisaa_baari">
-            <img
-              alt="plus"
-              src="{{ url_for('static', filename='./kuvat/plus.svg') }}"
-            />
-          </button>
-        </div>
       </div>
     </div>
 
@@ -64,6 +50,20 @@
 
     <div id="karttasivu">
       <div id="map"></div>
+      <div id="baarikierrosnapit">
+        <button id="poista_baarit">
+          <img
+            alt="roskakori"
+            src="{{ url_for('static', filename='./kuvat/roskakori.svg') }}"
+          />
+        </button>
+        <button id="lisaa_baari">
+          <img
+            alt="plus"
+            src="{{ url_for('static', filename='./kuvat/plus.svg') }}"
+          />
+        </button>
+      </div>
     </div>
     <div id="info_sivu" style="display: none">
       <div id="info_sisalto">
@@ -118,12 +118,6 @@
     </div>
     <div id="alapalkki">
       <div id="alapalkin_painikkeet">
-        <button id="nayta_baarikierros" class="valittuna alabar_button">
-          <img
-            alt="baarikierros"
-            src="{{ url_for('static', filename='./kuvat/baarikierros.svg') }}"
-          />
-        </button>
         <button id="nayta_kaikki_baarit" class="alabar_button">
           <img
             alt="baarikierros"
