@@ -11,12 +11,15 @@ function poista_baarit() {
 }
 
 function poista_baari(baarin_nimi) {
-  markerGroup.eachLayer((l) => {
+  let layers = markerGroup.getLayers();
+  layers.forEach((l) => {
     if (baarin_nimi === l._popup._content) {
       markerGroup.removeLayer(l);
+      layers.pop();
       return;
     }
   });
+  if (layers.length > 0) layers[layers.length - 1].openPopup();
 }
 
 function luo_kartta() {
