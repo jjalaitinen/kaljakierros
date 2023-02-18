@@ -28,3 +28,87 @@
 .info_keskelle {
   text-align: center;
 }
+
+.flippikortit {
+  display: flex;
+  justify-content: center;
+}
+
+.flippikortti {
+  background-color: transparent;
+  width: 20vw;
+  height: 20vw;
+  perspective: 50vw;
+  margin: 1vw;
+}
+
+.flippikortti_sisus {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flippikortti:hover .flippikortti_sisus {
+  transform: rotateY(180deg);
+}
+
+.flippikortti_front,
+.flippikortti_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flippikortti_front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flippikortti_back {
+  background-color: #ffebb7;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 1200px) {
+  #naamakuva {
+    width: 30vw !important;
+    height: 30vw !important;
+    perspective: 1vw !important;
+  }
+  .flippikortti {
+    width: 30vw;
+    height: 30vw;
+    perspective: 50vw;
+    margin: 1vw;
+  }
+}
+
+/** PUHELIN **/
+@media (max-width: 500px) {
+  .flippikortit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #naamakuva {
+    width: 50vw !important;
+    height: 50vw !important;
+    perspective: 1vw !important;
+  }
+
+  .flippikortti {
+    width: 50vw;
+    height: 50vw;
+    perspective: 50vw;
+    margin: 1vw;
+  }
+}
