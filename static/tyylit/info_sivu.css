@@ -20,7 +20,15 @@
 
 .info_teksti {
   text-align: justify;
-  text-justify: inter-word;
+  text-justify: inter-character;
+
+  hyphens: manual;
+  -moz-hyphens: manual;
+  -webkit-hyphens: manual;
+  word-break: break-word;
+  -ms-word-break: break-all;
+  word-wrap: break-word;
+
   margin-right: 5vw;
   margin-left: 5vw;
 }
@@ -76,6 +84,7 @@
   transform: rotateY(180deg);
 }
 
+/** Pienemmät näytöt, kuin desktop (esim iPad)**/
 @media (max-width: 1200px) {
   #naamakuva {
     width: 30vw !important;
