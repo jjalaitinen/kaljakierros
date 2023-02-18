@@ -8,4 +8,46 @@
   height: 100%;
   min-height: 100%;
   width: 100%;
+  z-index: 1;
+}
+
+/* Baarinlisäämisnapin ja listannollausnapin divi
+Oikeaan reunaan alas päällekkäin.
+*/
+#baarikierrosnapit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 5%;
+  margin-bottom: 12vh;
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+#baarikierrosnapit {
+  z-index: 2;
+}
+
+/*baarikierrosnappien kokoa ja väriä*/
+#baarikierrosnapit button {
+  background-color: rgb(255, 235, 183, 0.7);
+  border-radius: 25%;
+  min-width: 75px;
+  max-width: 75px;
+  min-height: 75px;
+  max-height: 75px;
+  padding: 0;
+}
+
+#poista_baarit img {
+  filter: invert(47%) sepia(86%) saturate(1375%) hue-rotate(339deg)
+    brightness(103%) contrast(101%);
+}
+
+#lisaa_baari img {
+  filter: invert(16%) sepia(78%) saturate(562%) hue-rotate(185deg)
+    brightness(98%) contrast(92%);
 }
