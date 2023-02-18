@@ -4,6 +4,7 @@ var markerGroup;
 function lisaa_baari(sijainti, nimi) {
   map.closePopup();
   L.marker(sijainti).addTo(markerGroup).bindPopup(nimi).openPopup();
+  map.setView(sijainti);
 }
 
 function poista_baarit() {
@@ -11,12 +12,18 @@ function poista_baarit() {
 }
 
 function poista_baari(baarin_nimi) {
-  markerGroup.eachLayer((l) => {
+  let layers = markerGroup.getLayers();
+  layers.forEach((l) => {
     if (baarin_nimi === l._popup._content) {
       markerGroup.removeLayer(l);
+      layers.pop();
       return;
     }
   });
+  if (layers.length > 0) {
+    layers[layers.length - 1].openPopup();
+    map.setView(layers[layers.length - 1]._latlng);
+  }
 }
 
 function luo_kartta() {
@@ -31,16 +38,24 @@ function kartan_alustus() {
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
 
-  var bounds = [
+  var default_bounds = [
     [62.239172, 25.734671],
     [62.246546, 25.750505],
     [62.243717, 25.759753],
     [62.23542, 25.742759],
   ];
 
-  map.fitBounds(bounds);
-  map.setMaxBounds(bounds);
-  map.options.minZoom = 14;
+  var max_bounds = [
+    [62.243725, 25.643903],
+    [62.286203, 25.749468],
+    [62.245303, 25.909074],
+    [62.18056, 25.745323],
+  ];
+
+  map.fitBounds(default_bounds);
+  map.setMaxBounds(max_bounds);
+  map.options.minZoom = 12;
+  map.options.maxZoom = 17;
 }
 
 function tarkista_koko() {
