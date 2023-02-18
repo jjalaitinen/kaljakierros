@@ -4,6 +4,7 @@ var markerGroup;
 function lisaa_baari(sijainti, nimi) {
   map.closePopup();
   L.marker(sijainti).addTo(markerGroup).bindPopup(nimi).openPopup();
+  map.setView(sijainti);
 }
 
 function poista_baarit() {
@@ -19,7 +20,10 @@ function poista_baari(baarin_nimi) {
       return;
     }
   });
-  if (layers.length > 0) layers[layers.length - 1].openPopup();
+  if (layers.length > 0) {
+    layers[layers.length - 1].openPopup();
+    map.setView(layers[layers.length - 1]._latlng);
+  }
 }
 
 function luo_kartta() {
