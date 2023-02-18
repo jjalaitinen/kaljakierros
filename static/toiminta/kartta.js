@@ -9,6 +9,15 @@ function poista_baarit() {
   markerGroup.clearLayers();
 }
 
+function poista_baari(baarin_nimi) {
+  markerGroup.eachLayer((l) => {
+    if (baarin_nimi === l._popup._content) {
+      markerGroup.removeLayer(l);
+      return;
+    }
+  });
+}
+
 function luo_kartta() {
   map = L.map("map").setView([62.2426, 25.7473], 16);
   markerGroup = L.layerGroup().addTo(map);
@@ -45,4 +54,5 @@ export {
   poista_baarit,
   lisaa_baari,
   tarkista_koko,
+  poista_baari,
 };
